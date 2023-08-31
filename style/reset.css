@@ -5,6 +5,10 @@
     font-family: '티머니';
     src:url(../fonts/TmoneyRoundWindExtraBold.ttf)
 }
+@font-face {
+    font-family: '티머니L';
+    src:url(../fonts/TmoneyRoundWindRegular.ttf)
+}
 /* reset.css */
 html,body, /*구조태그*/
 h1,h2,h3,h4,h5,h6,p,blockquote,address, /*block*/

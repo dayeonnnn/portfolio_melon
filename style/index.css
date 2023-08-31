@@ -1,0 +1,233 @@
+header {
+    height: 110px;
+    background: #000;
+    display: flex; align-items: center;
+    position: relative;
+    z-index: 999;
+}
+header .header_bg {
+    width: 1200px;
+    display: flex; align-items: center; justify-content: space-between;
+    margin:0 auto;
+}
+header nav {
+    display: flex;
+}
+header nav h1 {}
+header nav h1 a {
+    display: block;
+    width: 150px; height: 50px;
+}
+header nav h1 a img {width: 100%;}
+header nav ul {
+    display: flex; align-items: center;
+}
+header nav ul li {margin-left: 40px;}
+header nav ul li a {
+    font-family: '티머니L';
+    font-size: 1.25rem;
+    color:#fff;
+}
+/* 햄버거 메뉴 */
+header nav span {display: none;}
+header nav .m_nav_open {display: none;}
+header nav .m_nav_open .m_nav_top {}
+header nav .m_nav_open .m_nav_top a {}
+header nav .m_nav_open a {}
+/*  */
+header .nav_right {display: flex; align-items: center;}
+header .nav_right form {}
+header .nav_right form fieldset {
+    display: flex; align-items: center; justify-content: space-between;
+    width: 300px;
+    border:2px solid #00D344;
+    padding: 10px 20px;
+    border-radius: 100px;
+    margin-right: 15px;
+}
+header .nav_right form fieldset input {
+    width: 95%; background: none; 
+    position: relative; top:-2px; 
+    color:#fff;
+    font-size: 0.8rem;
+}
+header .nav_right form fieldset input::placeholder {font-size: 0.8rem; color:#fff; opacity: 0.8; background: none;}
+header .nav_right form fieldset button {width: 20px; background: none;}
+header .nav_right form fieldset button img {width: 100%;}
+header .nav_right a i {color:#00D344; font-size: 1.5rem;}
+/*  */
+main {}
+main #album {
+    /* background: url(../images/main/record_1_bg.jpg) ; */
+    height: 100vh;
+    padding: 80px 0;
+    position: relative; top:-110px
+}
+main #album::before {
+    content:'';
+    position: absolute;
+    top:0; left:0;
+    width: 100%; height: 100vh;
+    z-index: -1;
+    background: url(../images/main/record_1_bg.jpg) ;
+    opacity: 0.2;
+}
+main #album .album_main {
+    width: 1200px;
+    margin: 110px auto 0;
+    display: flex;
+    position: relative;
+}
+main #album .album_img {
+    position: relative;
+}
+main #album .album_img .record_1 {
+    width: 450px;
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+main #album .album_img .record_2 {
+    display: block;
+    width: 430px;
+    position: absolute; top:50%; left: 250px; transform: translateY(-50%);
+    z-index: 99;
+}
+main #album .main_right {
+    width: 460px;
+    position: absolute; right: 0; bottom: 0;
+}
+main #album .main_right .main_top {}
+main #album .main_right .main_top h2 {
+    font-size: 3.75rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+main #album .main_right .main_top h3 {
+    font-size: 1.875rem;
+    margin-bottom: 20px;
+}
+main #album .main_right .main_top p {
+    color:#aaa;
+    margin-bottom: 45px;
+}
+main #album .main_right .main_mid {}
+main #album .main_right .main_mid dl {}
+main #album .main_right .main_mid dl dt {
+    margin-bottom: 10px;
+}
+main #album .main_right .main_mid dl dt i {
+    font-size: 0.5rem; 
+    position: relative; top:-2px; 
+    margin-right: 5px;
+}
+main #album .main_right .main_mid dl dd {
+    margin-bottom: 20px;
+}
+main #album .main_right .main_btm {}
+main #album .main_right .main_btm i {
+    font-size: 2rem;
+}
+main #album .main_right .main_btm i:nth-child(1) {color:#aaa; margin-right: 20px;}
+main #album .main_right .main_btm i:nth-child(2) {color: #00D344;}
+/* 앨범 스와이퍼 */
+main .albumList_bg {
+    width: 100%;/*  height:160px;  */
+    background-color:rgba(255, 255,255, 0.5);
+    position: absolute; bottom: 0;
+    /* margin-top: 120px; */
+}
+main #albumList {
+    width: 850px;
+    padding: 30px 0;
+}
+main #albumList .swiper-wrapper {}
+main #albumList .swiper-slide {
+    width: 100px; height: 100px;
+    text-align: center;
+    background: #fff;
+}
+main #albumList .swiper-slide img {width: 100px;}
+/*  */
+main #top100 {}
+main #top100 h2 {}
+main #top100 ul {}
+main #top100 ul li {}
+main #top100 ul li > p{}
+main #top100 ul li > p img{}
+main #top100 ul li .txt p em {}
+main #top100 ul li .txt p {}
+main #top100 ul li a {}
+main #top100 ul li a i {}
+main #top100 ul li .bg {}
+main #ups {}
+main #ups .ups_top {}
+main #ups .ups_btm {}
+main #ups h3 {}
+main #ups .ups_1 {}
+main #ups .ups_2 {}
+main #ups .ups_3 {}
+main #ups .ups_4 {}
+main #ups .ups {}
+main #ups .ups .txt {}
+main #ups .ups .txt h4 {}
+main #ups .ups .txt p {}
+main #ups .ups .price {}
+main #ups .ups .price p {}
+main #ups .ups .price p em {}
+main #ups .ups .price a {}
+main #dj {}
+main #dj .dj_top {}
+main #dj .dj_top h3 {}
+main #dj .dj_top ul {}
+main #dj .dj_top ul li {}
+main #dj .dj_top ul li a {}
+main #dj .dj_top ul li a .img {}
+main #dj .dj_top ul li a .dj_txt {}
+main #dj .dj_top ul li a .dj_txt .title {}
+main #dj .dj_top ul li a .dj_txt .sub {}
+main #dj .dj_top ul li a .heart {}
+main #dj .dj_top ul li a .heart i {}
+main #dj .dj_top ul li a .heart span {}
+main #dj .dj_top ul li a .tag {}
+main #dj .dj_top ul li a .tag span {}
+main #dj .dj_btm {}
+main #dj .dj_btm h3 {}
+main #dj .dj_btm ul {}
+main #dj .dj_btm ul li {}
+main #dj .dj_btm ul li a {}
+main #dj .dj_btm ul li a .img {}
+main #dj .dj_btm ul li a .dj_txt {}
+main #dj .dj_btm ul li a .dj_txt .title {}
+main #dj .dj_btm ul li a .dj_txt .sub {}
+main #dj .dj_btm ul li a .heart {}
+main #dj .dj_btm ul li a .heart i {}
+main #dj .dj_btm ul li a .heart span {}
+main #dj .dj_btm ul li a .tag {}
+main #dj .dj_btm ul li a .tag span {}
+/* footer */
+footer {}
+footer .logo {}
+footer .logo h1 {}
+footer .logo h1 a {}
+footer .logo p {}
+footer .logo .call {}
+footer .logo .call i {}
+footer .logo .mail {}
+footer .logo .mail i {}
+footer .infor {}
+footer .infor .infor_1 {}
+footer .infor .infor_2 {}
+footer .infor p {}
+footer .infor a {}
+footer .right {}
+footer .right .mail {}
+footer .right .mail p {}
+footer .right .mail form {}
+footer .right .mail form fieldset {}
+footer .right .mail form fieldset i {}
+footer .right .mail form fieldset i input {}
+footer .right .mail form button {}
+footer .sns {}
+footer .sns p {}
+footer .sns p i {}
