@@ -1,0 +1,92 @@
+main {
+    height: 100vh;
+    display: flex; flex-flow: column nowrap;
+    align-items: center;
+    background: #000;
+}
+main h1 {
+    width: 200px; height: 64px;
+    margin: 60px 0 50px;
+}
+main h1 img {width: 100%;}
+main ul {
+    width: 800px;
+    display: flex; flex-flow: row wrap;
+}
+main ul li {}
+main ul li a {
+    display: block;
+    width: 200px; height: 200px;
+    padding-left: 10px;
+}
+main ul li a {
+    width: 200px; height: 200px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 66%);
+}
+main ul li:nth-child(1) {background: url(../images/main_1.jpg) no-repeat; background-size: cover;}
+main ul li:nth-child(2) {background: url(../images/main_2.jpg) no-repeat; background-size: cover;}
+main ul li:nth-child(3) {background: url(../images/main_3.jpg) no-repeat; background-size: cover;}
+main ul li:nth-child(4) {background: url(../images/main_4.jpg) no-repeat; background-size: cover;}
+main ul li:nth-child(5) {background: url(../images/main_5.jpg) no-repeat; background-size: cover;}
+main ul li:nth-child(6) {background: url(../images/main_6.jpg) no-repeat; background-size: cover;}
+main ul li:nth-child(7) {background: url(../images/main_7.jpg) no-repeat; background-size: cover;}
+main ul li:nth-child(8) {background: url(../images/main_8.jpg) no-repeat; background-size: cover;}
+main ul li a p {
+    font-size: 0.8rem;
+    color: #fff;
+}
+main ul li a p:nth-child(2) {
+    padding: 5px 10px;
+    background: rgba(0,0,0,0.6);
+    border: 1px solid #fff;
+    border-radius: 15px;
+    display: inline-block;
+    margin:120px 0 15px;
+}
+main ul li a p i {
+    font-size: 0.5rem;
+    margin-left: 10px;
+}
+main ul li a p em {
+    font-size: 1.6rem;
+    font-family: '티머니';
+}
+main .txt {
+    margin: 50px 0;
+    text-align: center;
+    color:#fff;
+}
+main .txt h2 {
+    font-family: '티머니';
+    font-size: 3.6rem;
+    margin-bottom: 30px;
+}
+main .txt p {
+    font-family: '티머니';
+    font-size: 1.75rem;
+}
+main .txt p em {
+    font-family: '티머니';
+    font-size: 1.75rem;
+    color: #00D344;
+}
+main .btn {}
+main .btn button {
+    background: none;
+    border: 3px solid #00D344;
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-family: '티머니';
+    color:#00D344;
+}
+main .btn button:hover {
+    background: #00D344;
+    color:#000;
+}
+main .btn button:first-child {margin-right: 50px;}
+main .btn button i {
+    margin-left: 10px;
+}
