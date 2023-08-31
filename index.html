@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/jquery.fullPage.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
@@ -43,7 +44,7 @@
                 <form action="#" method="get">
                     <fieldset>
                         <legend class="skip">검색양식</legend>
-                        <input type="search" placeholder="헤이즈X정승환의 '언젠간 괜찮아질 이야기'">
+                        <input type="text" placeholder="헤이즈X정승환의 '언젠간 괜찮아질 이야기'">
                         <button type="button"><img src="./images/search.png" alt="검색"></button>
                     </fieldset>
                 </form>
@@ -52,405 +53,466 @@
         </div>
     </header>
     <main>
-        <section id="album">
-            <div class="album_main">
-                <div class="album_img">
-                    <img class="record_1" src="./images/record/record_1.png" alt="">
-                    <img class="record_2" src="./images/record/record_2.png" alt="">
-                </div>
-                <div class="main_right">
-                    <div class="main_top">
-                        <h2>Super Shy</h2>
-                        <h3>New Jeans</h3>
-                        <p>NewJeans 2nd EP 'Get Up'</p>
+        <div id="wrap">
+            <div id="album" class="section">
+                <div class="album_main">
+                    <div class="album_img">
+                        <img class="record_1" src="./images/record/record_1.png" alt="">
+                        <img class="record_2" src="./images/record/record_2.png" alt="">
                     </div>
-                    <div class="main_mid">
-                        <dl>
-                            <dt><i class="fa-solid fa-forward"></i>작사</dt>
-                            <dd>Gigi, 김동현, Erika de Casier, Kristine Bogan, 다니엘(DANIELLE)</dd>
-                            <dt><i class="fa-solid fa-forward"></i>작곡</dt>
-                            <dd>Frankie Scoca, Erika de Casier, Kristine Bogan</dd>
-                            <dt><i class="fa-solid fa-forward"></i>편곡</dt>
-                            <dd>Frankie Scoca</dd>
-                        </dl>
-                    </div>
-                    <div class="main_btm">
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-solid fa-play"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- Swiper -->
-            <div class="albumList_bg">
-                <div class="swiper mySwiper" id="albumList">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><a href="#"><img src="./images/main_1.jpg" alt=""></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="./images/main_2.jpg" alt=""></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="./images/main_3.jpg" alt=""></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="./images/main_4.jpg" alt=""></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="./images/main_5.jpg" alt=""></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="./images/main_6.jpg" alt=""></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="./images/main_1.jpg" alt=""></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="./images/main_2.jpg" alt=""></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="./images/main_3.jpg" alt=""></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="./images/main_4.jpg" alt=""></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="./images/main_5.jpg" alt=""></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="./images/main_6.jpg" alt=""></a></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>              
-                </div>
-            </div>
-        </section>
-        <section id="top100">
-            <h2>Weekly Top 100</h2>
-            <ul>
-                <li>
-                    <p><img src="./images/main/main_top_1.jpg" alt="Seven"></p>
-                    <div class="txt">
-                        <p><em>Seven<br>(feat. Latto)</em></p>
-                        <p>정국</p>
-                    </div>
-                    <a href="#"><i class="fa-regular fa-heart"></i></a>
-                    <a href="#"><i class="fa-solid fa-play"></i></a>
-                    <div class="bg"></div>
-                </li>
-                <li>
-                    <p><img src="./images/main/main_top_2.jpg" alt="Super Shy"></p>
-                    <div class="txt">
-                        <p><em>Super Shy</em></p>
-                        <p>NewJeans</p>
-                    </div>
-                    <a href="#"><i class="fa-regular fa-heart"></i></a>
-                    <a href="#"><i class="fa-solid fa-play"></i></a>
-                    <div class="bg"></div>
-                </li>
-                <li>
-                    <p><img src="./images/main/main_top_3.jpg" alt="퀸카 (Queencard)"></p>
-                    <div class="txt">
-                        <p><em>퀸카 (Queencard)</em></p>
-                        <p>(여자)아이들</p>
-                    </div>
-                    <a href="#"><i class="fa-regular fa-heart"></i></a>
-                    <a href="#"><i class="fa-solid fa-play"></i></a>
-                    <div class="bg"></div>
-                </li>
-                <li>
-                    <p><img src="./images/main/main_top_4.jpg" alt="헤어지자 말해요"></p>
-                    <div class="txt">
-                        <p><em>헤어지자 말해요</em></p>
-                        <p>박재정</p>
-                    </div>
-                    <a href="#"><i class="fa-regular fa-heart"></i></a>
-                    <a href="#"><i class="fa-solid fa-play"></i></a>
-                    <div class="bg"></div>
-                </li>
-                <li>
-                <li>
-                    <p><img src="./images/main/main_top_5.jpg" alt="Fast Forward"></p>
-                    <div class="txt">
-                        <p><em>Fast Forward</em></p>
-                        <p>전소미</p>
-                    </div>
-                    <a href="#"><i class="fa-regular fa-heart"></i></a>
-                    <a href="#"><i class="fa-solid fa-play"></i></a>
-                    <div class="bg"></div>
-                </li>
-                <li>
-                    <p><img src="./images/main/main_top_6.jpg" alt="Bubble"></p>
-                    <div class="txt">
-                        <p><em>Bubble</em></p>
-                        <p>STAYC(스테이씨)</p>
-                    </div>
-                    <a href="#"><i class="fa-regular fa-heart"></i></a>
-                    <a href="#"><i class="fa-solid fa-play"></i></a>
-                    <div class="bg"></div>
-                </li>
-                <li>
-                    <p><img src="./images/main/main_top_7.jpg" alt="Summer (Feat. BE’O (비오))"></p>
-                    <div class="txt">
-                        <p><em>Summer (Feat. BE’O (비오))</em></p>
-                        <p>Paul Blanco</p>
-                    </div>
-                    <a href="#"><i class="fa-regular fa-heart"></i></a>
-                    <a href="#"><i class="fa-solid fa-play"></i></a>
-                    <div class="bg"></div>
-                </li>
-                <li>
-                    <p><img src="./images/main/main_top_8.jpg" alt="Ditto"></p>
-                    <div class="txt">
-                        <p><em>Ditto</em></p>
-                        <p>NewJeans</p>
-                    </div>
-                    <a href="#"><i class="fa-regular fa-heart"></i></a>
-                    <a href="#"><i class="fa-solid fa-play"></i></a>
-                    <div class="bg"></div>
-                </li>
-            </ul>
-            <button type="button" class="more_btn">more view<i class="fa-solid fa-angles-right"></i></button>
-            <button type="button" class="down"><i class="fa-solid fa-angles-down"></i></button>
-        </section>
-        <section id="ups">
-            <div class="ups_top">
-                <h3>MPS 다운 + 무제한 듣기</h3>
-                <div class="ups ups_1">
-                    <div class="txt">
-                        <h4>MP3 10 플러스 정기결제</h4>
-                        <p>매월 10곡 다운 (평생소장) + 무제한 듣기</p>
-                    </div>
-                    <div class="price">
-                        <p>14,500원</p>
-                        <p><em>9,900</em>원</p>
-                        <a href="#">구매</a>
+                    <div class="main_right">
+                        <div class="main_top">
+                            <h2>Super Shy</h2>
+                            <h3>New Jeans</h3>
+                            <p>NewJeans 2nd EP 'Get Up'</p>
+                        </div>
+                        <div class="main_mid">
+                            <dl>
+                                <dt><i class="fa-solid fa-forward"></i>작사</dt>
+                                <dd>Gigi, 김동현, Erika de Casier, Kristine Bogan, 다니엘(DANIELLE)</dd>
+                                <dt><i class="fa-solid fa-forward"></i>작곡</dt>
+                                <dd>Frankie Scoca, Erika de Casier, Kristine Bogan</dd>
+                                <dt><i class="fa-solid fa-forward"></i>편곡</dt>
+                                <dd>Frankie Scoca</dd>
+                            </dl>
+                        </div>
+                        <div class="main_btm">
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </div>
                     </div>
                 </div>
-                <div class="ups ups_2">
-                    <div class="txt">
-                        <h4>MP3 30 플러스 정기결제</h4>
-                        <p>매월 30곡 다운 (평생소장) + 무제한 듣기</p>
-                    </div>
-                    <div class="price">
-                        <p>25,500원</p>
-                        <p><em>17,900</em>원</p>
-                        <a href="#">구매</a>
-                    </div>
+                <!-- Swiper -->
+                <div class="albumList_bg">
+                    <div class="slide_size">
+                        <div class="swiper mySwiper" id="albumList">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><a href="#"><img src="./images/main_1.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a href="#"><img src="./images/main_2.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a href="#"><img src="./images/main_3.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a href="#"><img src="./images/main_4.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a href="#"><img src="./images/main_5.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a href="#"><img src="./images/main_6.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a href="#"><img src="./images/main_1.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a href="#"><img src="./images/main_2.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a href="#"><img src="./images/main_3.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a href="#"><img src="./images/main_4.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a href="#"><img src="./images/main_5.jpg" alt=""></a></div>
+                                <div class="swiper-slide"><a href="#"><img src="./images/main_6.jpg" alt=""></a></div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>         
                 </div>
             </div>
-            <div class="ups_btm">
-                <h3>MPS 다운 + 무제한 듣기</h3>
-                <div class="ups ups_3">
-                    <div class="txt">
-                        <h4>MP3 10 정기결제</h4>
-                        <p>매월 10곡 다운 (평생소장)</p>
-                    </div>
-                    <div class="price">
-                        <p>6,600원</p>
-                        <p><em>4,400</em>원</p>
-                        <a href="#">구매</a>
-                    </div>
-                </div>
-                <div class="ups ups_4">
-                    <div class="txt">
-                        <h4>MP3 30 정기결제</h4>
-                        <p>매월 30곡 다운 (평생소장)</p>
-                    </div>
-                    <div class="price">
-                        <p>18,000원</p>
-                        <p><em>11,900</em>원</p>
-                        <a href="#">구매</a>
-                    </div>
-                </div>
-            </div>
-            <button type="button" class="more_btn">more view<i class="fa-solid fa-angles-right"></i></button>
-            <button type="button" class="down"><i class="fa-solid fa-angles-down"></i></button>
-        </section>
-        <section id="dj">
-            <div class="dj_top">
-                <h3>먼지 쌓인 LP 같은 빈티지 무드</h3>
+            <div id="top100" class="section">
+                <h2 class="weekly">Weekly Top 100</h2>
                 <ul>
                     <li>
-                        <a href="#">
-                            <div class="img"></div>
-                            <div class="dj_txt">
-                                <p class="title">나른하게 젖어들다.<br>몽환적인 드림팝</p>
-                                <p class="sub"><em>DJ</em> INDIE마스터</p>
+                        <p><img src="./images/main/main_top_1.jpg" alt="Seven"></p>
+                        <div class="hover">
+                            <div class="txt">
+                                <p><em>Seven<br>(feat. Latto)</em></p>
+                                <p>정국</p>
                             </div>
-                            <div class="heart">
-                                <i class="fa-regular fa-heart"></i>
-                                <span>435</span>
-                                <span>25곡</span>
-                            </div>
-                            <div class="tag">
-                                <span>#인디</span>
-                                <span>#몽환적인</span>
-                            </div>
-                        </a>
+                            <a href="#"><i class="fa-regular fa-heart"></i></a>
+                            <a href="#"><i class="fa-solid fa-play"></i></a>
+                            <div class="bg"></div>
+                        </div>
                     </li>
                     <li>
-                        <a href="#">
-                            <div class="img"></div>
-                            <div class="dj_txt">
-                                <p class="title">LP로 듣고 싶은<br>빈티지 재즈</p>
-                                <p class="sub"><em>DJ</em> 음악이주는힘</p>
+                        <p><img src="./images/main/main_top_2.jpg" alt="Super Shy"></p>
+                            <div class="hover">
+                            <div class="txt">
+                                <p><em>Super Shy</em></p>
+                                <p>NewJeans</p>
                             </div>
-                            <div class="heart">
-                                <i class="fa-regular fa-heart"></i>
-                                <span>236</span>
-                                <span>29곡</span>
-                            </div>
-                            <div class="tag">
-                                <span>#빈티지</span>
-                                <span>#재즈바</span>
-                            </div>
-                        </a>
+                            <a href="#"><i class="fa-regular fa-heart"></i></a>
+                            <a href="#"><i class="fa-solid fa-play"></i></a>
+                            <div class="bg"></div>
+                        </div>
                     </li>
                     <li>
-                        <a href="#">
-                            <div class="img"></div>
-                            <div class="dj_txt">
-                                <p class="title">듣는 순간 빠져드는<br>빈티지 감성 POP</p>
-                                <p class="sub"><em>DJ</em> Dayeon</p>
+                        <p><img src="./images/main/main_top_3.jpg" alt="퀸카 (Queencard)"></p>
+                        <div class="hover">
+                            <div class="txt">
+                                <p><em>퀸카 (Queencard)</em></p>
+                                <p>(여자)아이들</p>
                             </div>
-                            <div class="heart">
-                                <i class="fa-regular fa-heart"></i>
-                                <span>521</span>
-                                <span>54곡</span>
-                            </div>
-                            <div class="tag">
-                                <span>#빈티지</span>
-                                <span>#감성</span>
-                            </div>
-                        </a>
+                            <a href="#"><i class="fa-regular fa-heart"></i></a>
+                            <a href="#"><i class="fa-solid fa-play"></i></a>
+                            <div class="bg"></div>
+                        </div>
                     </li>
                     <li>
-                        <a href="#">
-                            <div class="img"></div>
-                            <div class="dj_txt">
-                                <p class="title">반짝이는 Lofi와 하루를<br>달콤하게</p>
-                                <p class="sub"><em>DJ</em> Jiwoon</p>
+                        <p><img src="./images/main/main_top_4.jpg" alt="헤어지자 말해요"></p>
+                        <div class="hover">
+                            <div class="txt">
+                                <p><em>헤어지자 말해요</em></p>
+                                <p>박재정</p>
                             </div>
-                            <div class="heart">
-                                <i class="fa-regular fa-heart"></i>
-                                <span>469</span>
-                                <span>45곡</span>
+                            <a href="#"><i class="fa-regular fa-heart"></i></a>
+                            <a href="#"><i class="fa-solid fa-play"></i></a>
+                            <div class="bg"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <p><img src="./images/main/main_top_5.jpg" alt="Fast Forward"></p>
+                        <div class="hover">
+                            <div class="txt">
+                                <p><em>Fast Forward</em></p>
+                                <p>전소미</p>
                             </div>
-                            <div class="tag">
-                                <span>#힐링</span>
-                                <span>#기분전환</span>
+                            <a href="#"><i class="fa-regular fa-heart"></i></a>
+                            <a href="#"><i class="fa-solid fa-play"></i></a>
+                            <div class="bg"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <p><img src="./images/main/main_top_6.jpg" alt="Bubble"></p>
+                        <div class="hover">
+                            <div class="txt">
+                                <p><em>Bubble</em></p>
+                                <p>STAYC(스테이씨)</p>
                             </div>
-                        </a>
+                            <a href="#"><i class="fa-regular fa-heart"></i></a>
+                            <a href="#"><i class="fa-solid fa-play"></i></a>
+                            <div class="bg"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <p><img src="./images/main/main_top_7.jpg" alt="Summer (Feat. BE’O (비오))"></p>
+                        <div class="hover">
+                            <div class="txt">
+                                <p><em>Summer<br>(Feat. BE’O (비오))</em></p>
+                                <p>Paul Blanco</p>
+                            </div>
+                            <a href="#"><i class="fa-regular fa-heart"></i></a>
+                            <a href="#"><i class="fa-solid fa-play"></i></a>
+                            <div class="bg"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <p><img src="./images/main/main_top_8.jpg" alt="Ditto"></p>
+                        <div class="hover">
+                            <div class="txt">
+                                <p><em>Ditto</em></p>
+                                <p>NewJeans</p>
+                            </div>
+                            <a href="#"><i class="fa-regular fa-heart"></i></a>
+                            <a href="#"><i class="fa-solid fa-play"></i></a>
+                            <div class="bg"></div>
+                        </div>
                     </li>
                 </ul>
+                <a href="#" class="more_btn">more view<i class="fa-solid fa-angles-right"></i></a>
+                <a href="#" class="down"><i class="fa-solid fa-angles-down"></i></a>
             </div>
-            <div class="dj_btm">
-                <h3>공허한 나를 위로해 주는 건 음악뿐</h3>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <div class="img"></div>
-                            <div class="dj_txt">
-                                <p class="title">삶에 지치는 순간, 나를<br>위로해 주는 발라드</p>
-                                <p class="sub"><em>DJ</em> JUUU</p>
-                            </div>
-                            <div class="heart">
-                                <i class="fa-regular fa-heart"></i>
-                                <span>214</span>
-                                <span>21곡</span>
-                            </div>
-                            <div class="tag">
-                                <span>#지칠때</span>
-                                <span>#휴식</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img"></div>
-                            <div class="dj_txt">
-                                <p class="title">아름답고도 슬픈 선율의<br>클래식 연주곡</p>
-                                <p class="sub"><em>DJ</em> CLASSIC마스터</p>
-                            </div>
-                            <div class="heart">
-                                <i class="fa-regular fa-heart"></i>
-                                <span>344</span>
-                                <span>22곡</span>
-                            </div>
-                            <div class="tag">
-                                <span>#클래식</span>
-                                <span>#슬픈</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img"></div>
-                            <div class="dj_txt">
-                                <p class="title">생각이 많은 밤,<br>인디음악으로 비워내기</p>
-                                <p class="sub"><em>DJ</em> INDIE마스터</p>
-                            </div>
-                            <div class="heart">
-                                <i class="fa-regular fa-heart"></i>
-                                <span>234</span>
-                                <span>54곡</span>
-                            </div>
-                            <div class="tag">
-                                <span>#인디</span>
-                                <span>#혼자</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="img"></div>
-                            <div class="dj_txt">
-                                <p class="title">길고 긴 새벽을 홀로 걷는<br>너를 위한 팝</p>
-                                <p class="sub"><em>DJ</em> 듣는순간</p>
-                            </div>
-                            <div class="heart">
-                                <i class="fa-regular fa-heart"></i>
-                                <span>324</span>
-                                <span>41곡</span>
-                            </div>
-                            <div class="tag">
-                                <span>#새벽</span>
-                                <span>#위로</span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+            <div id="ups" class="section">
+                <div class="ups_top">
+                    <h3>MPS 다운 + 무제한 듣기</h3>
+                    <div class="ups ups_1">
+                        <div class="txt">
+                            <h4>MP3 10 플러스 정기결제</h4>
+                            <p>매월 10곡 다운 (평생소장) + 무제한 듣기</p>
+                        </div>
+                        <div class="price">
+                            <del><p>14,500원</p></del>
+                            <p><em>9,900</em>원</p>
+                            <a href="#">구매</a>
+                        </div>
+                    </div>
+                    <div class="ups ups_2">
+                        <div class="txt">
+                            <h4>MP3 30 플러스 정기결제</h4>
+                            <p>매월 30곡 다운 (평생소장) + 무제한 듣기</p>
+                        </div>
+                        <div class="price">
+                            <del><p>25,500원</p></del>
+                            <p><em>17,900</em>원</p>
+                            <a href="#">구매</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ups_btm">
+                    <h3>MPS 다운 + 무제한 듣기</h3>
+                    <div class="ups ups_3">
+                        <div class="txt">
+                            <h4>MP3 10 정기결제</h4>
+                            <p>매월 10곡 다운 (평생소장)</p>
+                        </div>
+                        <div class="price">
+                            <del><p>6,600원</p></del>
+                            <p><em>4,400</em>원</p>
+                            <a href="#">구매</a>
+                        </div>
+                    </div>
+                    <div class="ups ups_4">
+                        <div class="txt">
+                            <h4>MP3 30 정기결제</h4>
+                            <p>매월 30곡 다운 (평생소장)</p>
+                        </div>
+                        <div class="price">
+                            <del><p>18,000원</p></del>
+                            <p><em>11,900</em>원</p>
+                            <a href="#">구매</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="more_btn">more view<i class="fa-solid fa-angles-right"></i></a>
+                <a href="#" class="down"><i class="fa-solid fa-angles-down"></i></a>
             </div>
-        </section>
+            <div id="dj" class="section">
+                <div class="dj_top">
+                    <div class="title">
+                        <h3>먼지 쌓인 LP 같은 빈티지 무드</h3>
+                        <a href="#"><i class="fa-regular fa-square-plus"></i></a>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="img"></div>
+                                <div class="dj_bg">
+                                    <div class="dj_txt">
+                                        <p class="title">나른하게 젖어들다.<br>몽환적인 드림팝</p>
+                                        <p class="sub"><em>DJ</em> INDIE마스터</p>
+                                    </div>
+                                    <div class="heart">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <span>435</span>
+                                        <span>25곡</span>
+                                    </div>
+                                    <div class="tag">
+                                        <span>#인디</span>
+                                        <span>#몽환적인</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"></div>
+                                <div class="dj_bg">
+                                    <div class="dj_txt">
+                                        <p class="title">LP로 듣고 싶은<br>빈티지 재즈</p>
+                                        <p class="sub"><em>DJ</em> 음악이주는힘</p>
+                                    </div>
+                                    <div class="heart">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <span>236</span>
+                                        <span>29곡</span>
+                                    </div>
+                                    <div class="tag">
+                                        <span>#빈티지</span>
+                                        <span>#재즈바</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"></div>
+                                <div class="dj_bg">
+                                    <div class="dj_txt">
+                                        <p class="title">듣는 순간 빠져드는<br>빈티지 감성 POP</p>
+                                        <p class="sub"><em>DJ</em> Dayeon</p>
+                                    </div>
+                                    <div class="heart">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <span>521</span>
+                                        <span>54곡</span>
+                                    </div>
+                                    <div class="tag">
+                                        <span>#빈티지</span>
+                                        <span>#감성</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"></div>
+                                <div class="dj_bg">
+                                    <div class="dj_txt">
+                                        <p class="title">반짝이는 Lofi와 하루를<br>달콤하게</p>
+                                        <p class="sub"><em>DJ</em> Jiwoon</p>
+                                    </div>
+                                    <div class="heart">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <span>469</span>
+                                        <span>45곡</span>
+                                    </div>
+                                    <div class="tag">
+                                        <span>#힐링</span>
+                                        <span>#기분전환</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dj_btm">
+                    <div class="title">
+                        <h3>공허한 나를 위로해 주는 건 음악뿐</h3>
+                        <a href="#"><i class="fa-regular fa-square-plus"></i></a>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="img"></div>
+                                <div class="dj_bg">
+                                    <div class="dj_txt">
+                                        <p class="title">삶에 지치는 순간, 나를<br>위로해 주는 발라드</p>
+                                        <p class="sub"><em>DJ</em> JUUU</p>
+                                    </div>
+                                    <div class="heart">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <span>214</span>
+                                        <span>21곡</span>
+                                    </div>
+                                    <div class="tag">
+                                        <span>#지칠때</span>
+                                        <span>#휴식</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"></div>
+                                <div class="dj_bg">
+                                    <div class="dj_txt">
+                                        <p class="title">아름답고도 슬픈 선율의<br>클래식 연주곡</p>
+                                        <p class="sub"><em>DJ</em> CLASSIC마스터</p>
+                                    </div>
+                                    <div class="heart">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <span>344</span>
+                                        <span>22곡</span>
+                                    </div>
+                                    <div class="tag">
+                                        <span>#클래식</span>
+                                        <span>#슬픈</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"></div>
+                                <div class="dj_bg">
+                                    <div class="dj_txt">
+                                        <p class="title">생각이 많은 밤,<br>인디음악으로 비워내기</p>
+                                        <p class="sub"><em>DJ</em> INDIE마스터</p>
+                                    </div>
+                                    <div class="heart">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <span>234</span>
+                                        <span>54곡</span>
+                                    </div>
+                                    <div class="tag">
+                                        <span>#인디</span>
+                                        <span>#혼자</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"></div>
+                                <div class="dj_bg">
+                                    <div class="dj_txt">
+                                        <p class="title">길고 긴 새벽을 홀로 걷는<br>너를 위한 팝</p>
+                                        <p class="sub"><em>DJ</em> 듣는순간</p>
+                                    </div>
+                                    <div class="heart">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <span>324</span>
+                                        <span>41곡</span>
+                                    </div>
+                                    <div class="tag">
+                                        <span>#새벽</span>
+                                        <span>#위로</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
-        <div class="logo">
-            <h1><a href="./images/logo.png"></a></h1>
-            <p>경기도 성남시 분당구 판교역로 221<br>대표이사 : 이진수, 김성수</p>
-            <div class="call">
-                <i class="fa-solid fa-phone"></i>1566-7727 (평일 09:00-18:00, 유료)
+        <div class="footer_bg">
+            <div class="logo">
+                <h1><a href="#"><img src="./images/logo.png" alt="Melon"></a></h1>
+                <p>경기도 성남시 분당구 판교역로 221<br>대표이사 : 이진수, 김성수</p>
+                <div class="call">
+                    <i class="fa-solid fa-phone"></i>1566-7727 (평일 09:00-18:00, 유료)
+                </div>
+                <div class="mail">
+                    <i class="fa-solid fa-envelope"></i>melon_info@kakaoent.com
+                </div>
             </div>
-            <div class="mail">
-                <i class="fa-solid fa-envelope"></i>>melon_info@kakaoent.com
+            <div class="infor">
+                <div class="infor_1">
+                    <p>Information</p>
+                    <a href="#">About Us</a>
+                    <a href="#">More Search</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Testimonials</a>
+                    <a href="#">Events</a>
+                </div>
+                <div class="infor_2">
+                    <p>Helpful Link</p>
+                    <a href="#">Services</a>
+                    <a href="#">Supports</a>
+                    <a href="#">Terms & Condition</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
             </div>
-        </div>
-        <div class="infor">
-            <div class="infor_1">
-                <p>Information</p>
-                <a href="#">About Us</a>
-                <a href="#">More Search</a>
-                <a href="#">Blog</a>
-                <a href="#">Testimonials</a>
-                <a href="#">Events</a>
-            </div>
-            <div class="infor_2">
-                <p>Helpful Link</p>
-                <a href="#">Services</a>
-                <a href="#">Supports</a>
-                <a href="#">Terms & Condition</a>
-                <a href="#">Privacy Policy</a>
-            </div>
-        </div>
-        <div class="right">
-            <div class="mail">
-                <p>Subscribe More Info</p>
-                <form action="#" method="get">
-                    <fieldset>
-                        <legend class="skip">메일주소</legend>
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="search" placeholder="Entet your Email">
-                    </fieldset>
-                    <button type="button">Subscribe</button>
-                </form>
-            </div>
-            <div class="sns">
-                <p><i class="fa-brands fa-facebook-f"></i></p>
-                <p><i class="fa-brands fa-instagram"></i></p>
-                <p><i class="fa-brands fa-twitter"></i></p>
+            <div class="right">
+                <div class="mail">
+                    <p>Subscribe More Info</p>
+                    <form action="#" method="get">
+                        <fieldset>
+                            <legend class="skip">메일주소</legend>
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="text" placeholder="Entet your Email">
+                        </fieldset>
+                        <button type="button">Subscribe</button>
+                    </form>
+                </div>
+                <div class="sns">
+                    <a><i class="fa-brands fa-facebook-f"></i></a>
+                    <a><i class="fa-brands fa-instagram"></i></a>
+                    <a><i class="fa-brands fa-twitter"></i></a>
+                </div>
             </div>
         </div>
     </footer>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./script/index.js"></script>
+    <!-- 스트롤 트리거 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <!-- 풀페이지 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script/jquery.fullPage.js"></script>
+    <!-- 내부 스크립트 -->
+    <script>
+        // $('#wrap').fullpage()/* !!!!!!!!!!!!!!!!!!! */
+/*         gsap.fromTo('#top100 .weekly',{
+            opacity:0,
+            scale:0.5
+        },{
+            opacity:1,
+            scale:1.2,
+            duration:1,
+            scrollTrigger:'#top100'
+        }) */
+    </script>
 </body>
 </html>

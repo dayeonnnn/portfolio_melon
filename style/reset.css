@@ -9,17 +9,25 @@
     font-family: '티머니L';
     src:url(../fonts/TmoneyRoundWindRegular.ttf)
 }
+@font-face {
+    font-family: 'G마켓B';
+    src:url(../fonts/GmarketSansTTFBold.ttf)
+}
+@font-face {
+    font-family: 'G마켓';
+    src:url(../fonts/GmarketSansTTFMedium.ttf)
+}
 /* reset.css */
 html,body, /*구조태그*/
 h1,h2,h3,h4,h5,h6,p,blockquote,address, /*block*/
-span,strong,em,q,sub,sup,del,s,a,img, /*inline*/
+span,strong,em,q,sub,sup,s,a,img, /*inline*/
 div,header,nav,aside,main,footer,article,figure,figcaption,section, 
 table,thead,tbody,tfoot,tr,th,td,ul,ol,li,dl,dt,dd, /*묶어주는 태그*/
 form,fieldset,legend,input,select,option,button,label,textarea {
     font-family: 'Noto Sans KR', sans-serif;
     margin:0; padding:0; line-height:1.0;
     font-size:16px; font-style:normal; font-weight:normal;
-    text-decoration:none; line-height: -0.02em;
+    text-decoration:none; letter-spacing: -0.02em;
 }
 th {text-ailgn:left;}
 table,tr,th,td {border-collase:collase;}

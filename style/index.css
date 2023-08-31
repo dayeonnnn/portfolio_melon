@@ -47,21 +47,23 @@ header .nav_right form fieldset {
 }
 header .nav_right form fieldset input {
     width: 95%; background: none; 
-    position: relative; top:-2px; 
     color:#fff;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
 }
-header .nav_right form fieldset input::placeholder {font-size: 0.8rem; color:#fff; opacity: 0.8; background: none;}
-header .nav_right form fieldset button {width: 20px; background: none;}
+header .nav_right form fieldset input::-ms-clear {
+    content:'';
+    display: none;
+}
+header .nav_right form fieldset input::placeholder {
+    font-size: 0.75rem; color:#fff; opacity: 0.8;
+}
+header .nav_right form fieldset button {width: 20px; background: none; position: relative; top:1px}
 header .nav_right form fieldset button img {width: 100%;}
 header .nav_right a i {color:#00D344; font-size: 1.5rem;}
 /*  */
 main {}
 main #album {
-    /* background: url(../images/main/record_1_bg.jpg) ; */
-    height: 100vh;
-    padding: 80px 0;
-    position: relative; top:-110px
+    height: calc(100vh - 110px);
 }
 main #album::before {
     content:'';
@@ -70,38 +72,57 @@ main #album::before {
     width: 100%; height: 100vh;
     z-index: -1;
     background: url(../images/main/record_1_bg.jpg) ;
+    background-position: 0 -100px;
     opacity: 0.2;
 }
 main #album .album_main {
     width: 1200px;
-    margin: 110px auto 0;
-    display: flex;
+    margin:0 auto;
+    display: flex; align-items: flex-end; justify-content: space-between;
     position: relative;
+    padding: 80px 0;
 }
 main #album .album_img {
     position: relative;
 }
 main #album .album_img .record_1 {
-    width: 450px;
+    width: 470px;
     display: block;
     position: relative;
     z-index: 100;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
 }
 main #album .album_img .record_2 {
     display: block;
-    width: 430px;
-    position: absolute; top:50%; left: 250px; transform: translateY(-50%);
+    width: 450px;
+    position: absolute; top:50%; left: 200px; transform: translateY(-50%);
     z-index: 99;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
+    animation: moveRight 20s forwards ;
+    /* animation-delay: 1s; */
+    /* animation: deg 5s linear; */
+}
+@keyframes moveRight {
+    0% {
+        position: absolute; top:50%; left: 150px; transform: translateY(-50%);
+    }
+    3% {
+        position: absolute; top:50%; left: 250px; transform: translateY(-50%);
+    }
+    100% {
+        position: absolute; top:50%; left: 250px; transform: translateY(-50%) rotate(1000deg);
+    }
 }
 main #album .main_right {
-    width: 460px;
-    position: absolute; right: 0; bottom: 0;
+    /* width: 460px; */ /* !!!앨범 움직이는거 싫으면 너비 정하기 */
+    position: absolute; right: 0;
 }
 main #album .main_right .main_top {}
 main #album .main_right .main_top h2 {
-    font-size: 3.75rem;
-    font-weight: 900;
+    font-family: 'G마켓B';
+    font-size: 3rem;
     margin-bottom: 30px;
+    line-height: 60px;
 }
 main #album .main_right .main_top h3 {
     font-size: 1.875rem;
@@ -112,7 +133,7 @@ main #album .main_right .main_top p {
     margin-bottom: 45px;
 }
 main #album .main_right .main_mid {}
-main #album .main_right .main_mid dl {}
+main #album .main_right .main_mid dl {margin-bottom: 50px;}
 main #album .main_right .main_mid dl dt {
     margin-bottom: 10px;
 }
@@ -122,21 +143,26 @@ main #album .main_right .main_mid dl dt i {
     margin-right: 5px;
 }
 main #album .main_right .main_mid dl dd {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 main #album .main_right .main_btm {}
-main #album .main_right .main_btm i {
-    font-size: 2rem;
+main #album .main_right .main_btm a:first-child {
+    display: inline-block; width: 40px; height: 40px; background:url(../images/heart.png);
+    margin-right: 20px;
+    transition: all 0.5s;
 }
-main #album .main_right .main_btm i:nth-child(1) {color:#aaa; margin-right: 20px;}
-main #album .main_right .main_btm i:nth-child(2) {color: #00D344;}
+main #album .main_right .main_btm a:first-child:hover {background: url(../images/heart_click.png);}
+main #album .main_right .main_btm a:last-child {
+    display: inline-block; width: 40px; height: 40px; background:url(../images/play.png);
+}
+main #album .main_right .main_btm a:last-child:hover {background: url(../images/play_click.png);}
 /* 앨범 스와이퍼 */
 main .albumList_bg {
-    width: 100%;/*  height:160px;  */
-    background-color:rgba(255, 255,255, 0.5);
+    width: 100%;
+    background-color:rgba(255, 255,255, 0.3);
     position: absolute; bottom: 0;
-    /* margin-top: 120px; */
 }
+main .albumList_bg .slide_size {width: 850px; position: relative; margin: 0 auto;}
 main #albumList {
     width: 850px;
     padding: 30px 0;
@@ -146,88 +172,349 @@ main #albumList .swiper-slide {
     width: 100px; height: 100px;
     text-align: center;
     background: #fff;
+    transition: all 0.3s;
 }
+main #albumList .swiper-slide:hover {box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);}
 main #albumList .swiper-slide img {width: 100px;}
+main #album .swiper-button-prev {
+    background: url(../images/slide_prev.png) no-repeat; background-position: center;
+    position: absolute; top:50%; left: -50px;
+}
+main #album .swiper-button-prev::after,main #album .swiper-button-next::after {content:''; display: none;}
+main #album .swiper-button-next {
+    background: url(../images/slide_next.png) no-repeat; background-position: center;
+    position: absolute; top:50%; right:-50px;
+}
 /*  */
-main #top100 {}
-main #top100 h2 {}
-main #top100 ul {}
-main #top100 ul li {}
-main #top100 ul li > p{}
-main #top100 ul li > p img{}
-main #top100 ul li .txt p em {}
-main #top100 ul li .txt p {}
-main #top100 ul li a {}
-main #top100 ul li a i {}
-main #top100 ul li .bg {}
-main #ups {}
-main #ups .ups_top {}
-main #ups .ups_btm {}
-main #ups h3 {}
-main #ups .ups_1 {}
-main #ups .ups_2 {}
-main #ups .ups_3 {}
-main #ups .ups_4 {}
-main #ups .ups {}
+main #top100 {
+    background: #000;
+    height: 100vh; margin: 0 auto;
+    padding: 55px 0;
+    text-align: center;
+}
+main #top100 h2 {
+    font-size: 1.5625rem;
+    font-weight: 700;
+    color:#00D344;
+    margin-bottom: 40px;
+}
+main #top100 ul {
+    width: 1060px; margin: 0 auto;
+    display: flex; flex-flow: row wrap;
+    justify-content: space-between;
+}
+main #top100 ul li {
+    width: 250px;
+    position: relative;
+    text-align: center;
+}
+main #top100 ul li > p {
+    height: 250px; 
+    position: relative;
+}
+main #top100 ul li > p img {width: 100%; border-radius: 22px;}
+main #top100 ul li .txt {
+    position: absolute; bottom:70px; left:20px;
+    text-align: left;
+    z-index: 600;
+}
+main #top100 ul li .txt p em {
+    font-size: 1.5625rem;
+    font-weight: 900;
+    line-height: 2rem;
+}
+main #top100 ul li .txt p:first-child {margin-bottom: 20px;}
+main #top100 ul li .txt p {
+    font-size: 1.25rem;
+    color:#fff;
+}
+main #top100 ul li a {
+    display: inline-block;
+    width: 40px; height: 40px;
+    background: #000; border:1px solid #00D344;
+    border-radius: 50px;
+    text-align: center;
+    position: relative; top:-20px;
+    z-index: 500;
+    transition: all 0.3s;
+}
+main #top100 ul li a:hover {background: #00D344; border:1px solid #000;}
+main #top100 ul li a:hover i {color: #000;}
+main #top100 ul li a:nth-child(2) {margin-right:20px;}
+main #top100 ul li a i {
+    color:#00D344;
+    line-height: 40px;
+    font-size: 1.25rem;
+}
+main #top100 ul li .bg {
+    width: 250px; height: 250px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    position: absolute; top:0; left: 0;
+    z-index: 400;
+    border-radius: 20px;
+}
+/* more view 버튼 */
+main .more_btn {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.875rem;
+    color:#00D344;
+    border:2px solid #00D344;
+    padding:10px 40px 15px;
+    border-radius: 50px;
+    margin: 40px 0;
+    transition: all 0.3s;
+}
+main .more_btn i {
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+main .more_btn:hover {background: #00D344; color: #000;}
+main .down {
+    display: block;
+    color: rgba(255,255,255,0.6);
+    /* 애니메이션 */
+    animation: moveUpDown 0.5s infinite cubic-bezier(0.61, 0.04, 0.48, 0.97) alternate;
+}
+@keyframes moveUpDown {
+    0% {margin-top:0px;}
+    /* 50% {margin-top: 10px;} */
+    100% {margin-top: 10px;}
+}
+
+main .down i {
+    font-size: 1.5rem;
+}
+main #ups {
+    height: 100vh;
+    background: #000;
+    text-align: center;
+    padding-top: 70px;
+}
+main #ups .ups_top,main #ups .ups_btm {
+    width: 860px;
+    margin: 0 auto;
+}
+main #ups h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color:#fff;
+    text-align: left;
+    margin-bottom: 20px;
+}
+main #ups .ups_1 {border-left: 10px solid #00D344; margin-bottom: 20px;}
+main #ups .ups_2 {border-left: 10px solid #00D344; margin-bottom: 40px;}
+main #ups .ups_3 {border-left: 10px solid #9C00D3; margin-bottom: 20px;}
+main #ups .ups_4 {border-left: 10px solid #9C00D3;}
+main #ups .ups {
+    text-align: left;
+    background-color: #fff;
+    border-bottom-right-radius: 20px;
+    display: flex; justify-content: space-between;
+    padding: 30px;
+}
 main #ups .ups .txt {}
-main #ups .ups .txt h4 {}
-main #ups .ups .txt p {}
-main #ups .ups .price {}
-main #ups .ups .price p {}
-main #ups .ups .price p em {}
-main #ups .ups .price a {}
-main #dj {}
-main #dj .dj_top {}
-main #dj .dj_top h3 {}
-main #dj .dj_top ul {}
-main #dj .dj_top ul li {}
-main #dj .dj_top ul li a {}
-main #dj .dj_top ul li a .img {}
-main #dj .dj_top ul li a .dj_txt {}
-main #dj .dj_top ul li a .dj_txt .title {}
-main #dj .dj_top ul li a .dj_txt .sub {}
-main #dj .dj_top ul li a .heart {}
-main #dj .dj_top ul li a .heart i {}
-main #dj .dj_top ul li a .heart span {}
-main #dj .dj_top ul li a .tag {}
-main #dj .dj_top ul li a .tag span {}
-main #dj .dj_btm {}
-main #dj .dj_btm h3 {}
-main #dj .dj_btm ul {}
-main #dj .dj_btm ul li {}
-main #dj .dj_btm ul li a {}
-main #dj .dj_btm ul li a .img {}
-main #dj .dj_btm ul li a .dj_txt {}
-main #dj .dj_btm ul li a .dj_txt .title {}
-main #dj .dj_btm ul li a .dj_txt .sub {}
-main #dj .dj_btm ul li a .heart {}
-main #dj .dj_btm ul li a .heart i {}
-main #dj .dj_btm ul li a .heart span {}
-main #dj .dj_btm ul li a .tag {}
-main #dj .dj_btm ul li a .tag span {}
+main #ups .ups .txt h4 {
+    font-size: 1.5625rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+main #ups .ups .txt p {
+    font-weight: 500;
+    color:#aaa;
+}
+
+main #ups .ups .price {
+    display: flex; align-items: center;
+}
+main #ups .ups .price p {
+    font-size: 1.25rem;
+}
+main #ups .ups .price p:nth-child(1) {width: 100px; margin-right: 30px;}
+main #ups .ups .price p:nth-child(2) {width: 150px;}
+main #ups .ups .price p em {
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+main #ups .ups .price a {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 500;
+    background: #000;
+    color:#fff;
+    height: 45px; padding: 12px 20px;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+main #ups .ups .price a:hover {background: #00D344; color:#000; font-weight: 700;}
+main #dj {
+    background: #f2f2f2;
+    padding: 130px 0;
+}
+main #dj .dj_top,main #dj .dj_btm {width: 1060px; margin: 0 auto;}
+main #dj .dj_top {margin-bottom: 50px;}
+main #dj .title {
+    display: flex; align-items: center; justify-content: space-between;
+}
+main #dj .title h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 17px;
+}
+main #dj .title a {}
+main #dj .title a i {
+    color:#aaa; font-size: 1.5rem; position: relative; top:-5px
+}
+main #dj ul {
+    display: flex; justify-content: space-between;
+}
+main #dj ul li {width: 250px;}
+main #dj ul li a {}
+main #dj ul li a .img {height: 250px;}
+main #dj ul li a .dj_bg {background: #fff; transition: all 0.5s;}
+/* dj img */
+main #dj .dj_top ul li:nth-child(1) a .img {background: url(../images/dj_1.jpg) no-repeat;}
+main #dj .dj_top ul li:nth-child(2) a .img {background: url(../images/dj_2.jpg) no-repeat;}
+main #dj .dj_top ul li:nth-child(3) a .img {background: url(../images/dj_3.jpg) no-repeat;}
+main #dj .dj_top ul li:nth-child(4) a .img {background: url(../images/dj_4.jpg) no-repeat;}
+main #dj .dj_btm ul li:nth-child(1) a .img {background: url(../images/dj_2_1.jpg) no-repeat;}
+main #dj .dj_btm ul li:nth-child(2) a .img {background: url(../images/dj_2_2.jpg) no-repeat;}
+main #dj .dj_btm ul li:nth-child(3) a .img {background: url(../images/dj_2_3.jpg) no-repeat;}
+main #dj .dj_btm ul li:nth-child(4) a .img {background: url(../images/dj_2_4.jpg) no-repeat;}
+main #dj ul li a .dj_txt {padding: 30px 0 0 20px;}
+main #dj ul li a .dj_txt .title {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    line-height: 29px;
+}
+main #dj ul li a .dj_txt .sub {}
+main #dj ul li a .dj_txt .sub em {color:#9C00D3}
+main #dj ul li a .heart {
+    color:#aaa;
+    padding: 20px 0 0 20px;
+}
+main #dj ul li a .heart i {margin-right: 15px;}
+main #dj ul li a .heart span {}
+main #dj ul li a .heart span:nth-child(2)::after {
+    content: '';
+    display: inline-block;
+    width: 1px; height:13px;
+    background: #aaa;
+    margin: 0 15px;
+}
+main #dj ul li a .tag {
+    padding: 20px 0 30px 20px;
+}
+main #dj ul li a .tag span {
+    display: inline-block;
+    color: #aaa;
+    font-size: 0.75rem;
+    border:1px solid #aaa;
+    border-radius: 50px;
+    padding: 5px 10px;
+}
+main #dj ul li a:hover .img {background-size: 50%;}
+main #dj ul li a:hover .dj_bg {background-color: #000;}
+main #dj ul li a:hover .dj_txt p em {font-weight: 700;}
+main #dj ul li a:hover .dj_txt {color:#fff;}
+main #dj ul li a:hover .heart i {color: #FF004C;}
+main #dj ul li a:hover .tag span {
+    background: #00D344; border:1px solid #00D344; color:#000;
+    font-weight: 700;
+}
 /* footer */
-footer {}
+footer {
+    color:#fff;
+    background: #000;
+    padding: 50px;
+}
+footer .footer_bg {
+    width: 1200px; margin: 0 auto;
+    display: flex; justify-content: space-between;
+}
 footer .logo {}
-footer .logo h1 {}
+footer .logo h1 {width: 183px;}
 footer .logo h1 a {}
-footer .logo p {}
-footer .logo .call {}
-footer .logo .call i {}
-footer .logo .mail {}
-footer .logo .mail i {}
-footer .infor {}
-footer .infor .infor_1 {}
-footer .infor .infor_2 {}
-footer .infor p {}
-footer .infor a {}
+footer .logo h1 a img {width: 100%;}
+footer .logo p {
+    font-size: 0.875rem;
+    line-height: 30px;
+    margin: 30px 0;
+}
+footer .logo .call {
+    font-size: 0.875rem;
+    margin-bottom:15px;
+}
+footer .logo .mail {
+    font-size: 0.875rem;
+}
+footer .logo i {
+    color: #00D344;
+    margin-right: 30px;
+}
+footer .infor {
+    display: flex;
+}
+footer .infor .infor_1 {
+    display: flex; flex-flow: column nowrap; margin-right: 40px;
+}
+footer .infor .infor_2 {
+    display: flex; flex-flow: column nowrap;
+}
+footer .infor p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #00D344;
+    margin-bottom: 23px;
+}
+footer .infor a {
+    font-size: 0.875rem;
+    color:#fff;
+    margin-bottom: 23px;
+}
+footer .infor a:last-child {margin: 0;}
 footer .right {}
-footer .right .mail {}
-footer .right .mail p {}
+footer .right .mail {margin-bottom: 80px;}
+footer .right .mail p {
+    margin-bottom: 20px;
+}
 footer .right .mail form {}
-footer .right .mail form fieldset {}
-footer .right .mail form fieldset i {}
-footer .right .mail form fieldset i input {}
-footer .right .mail form button {}
-footer .sns {}
-footer .sns p {}
-footer .sns p i {}
+footer .right .mail form fieldset {
+    border:1px solid #00D344;
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+footer .right .mail form fieldset i {color: #00D344; margin-right: 10px;}
+footer .right .mail form fieldset input::-ms-clear {
+    content:'';
+    display: none;
+}
+footer .right .mail form fieldset input {
+    background:none; color:#fff;
+    font-size: 0.75rem;
+    width: 80%;
+}
+footer .right .mail form fieldset input::placeholder {
+    font-size: 0.75rem; position: relative; top:-2px;
+}
+footer .right .mail form button {
+    font-size: 0.75rem;
+    padding: 5px 15px;
+    background-color: #00D344;
+    border-radius: 5px;
+}
+footer .sns {display: flex;}
+footer .sns a {
+    width: 50px; height: 50px;
+    border-radius: 25px;
+    background: #00D344;
+    text-align: center;
+    }
+    footer .sns a:nth-child(2) {margin: 0 15px;}
+footer .sns a i {
+    color:#000; line-height: 50px;
+    font-size: 1.7rem;
+}
