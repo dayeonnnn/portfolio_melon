@@ -1,9 +1,10 @@
 header {
-    height: 110px;
+    height: 110px; width: 100%;
     background: #000;
     display: flex; align-items: center;
     position: relative;
     z-index: 999;
+    position: fixed;
 }
 header .header_bg {
     width: 1200px;
@@ -55,32 +56,40 @@ header .nav_right form fieldset input::-ms-clear {
     display: none;
 }
 header .nav_right form fieldset input::placeholder {
-    font-size: 0.75rem; color:#fff; opacity: 0.8;
+    font-size: 0.75rem; color:#fff; opacity: 0.8; position: relative; top:-1px;
 }
 header .nav_right form fieldset button {width: 20px; background: none; position: relative; top:1px}
 header .nav_right form fieldset button img {width: 100%;}
 header .nav_right a i {color:#00D344; font-size: 1.5rem;}
 /*  */
 main {}
-main #album {
-    height: calc(100vh - 110px);
+/* main #album {
+    background: url(../images/record/record_1_bg.jpg) no-repeat ;
+    background-size: cover;
+    background-position: 0 -100px;
+    z-index: 1;
+} */
+main .album_bg {
+    width: 2500px;
+    position: absolute; top: -70px; left:50%; transform: translateX(-50%);
 }
-main #album::before {
+main .album_bg img {width: 100%}
+main #album::after {
     content:'';
     position: absolute;
     top:0; left:0;
     width: 100%; height: 100vh;
     z-index: -1;
-    background: url(../images/main/record_1_bg.jpg) ;
-    background-position: 0 -100px;
-    opacity: 0.2;
+    background-color: #fff;;
+    opacity: 0.7;
+    z-index: 2;
 }
 main #album .album_main {
     width: 1200px;
     margin:0 auto;
     display: flex; align-items: flex-end; justify-content: space-between;
-    position: relative;
-    padding: 80px 0;
+    position: relative; top:-30px;
+    z-index: 3;
 }
 main #album .album_img {
     position: relative;
@@ -116,24 +125,25 @@ main #album .album_img .record_2 {
 main #album .main_right {
     /* width: 460px; */ /* !!!앨범 움직이는거 싫으면 너비 정하기 */
     position: absolute; right: 0;
+    width: 450px;
 }
 main #album .main_right .main_top {}
+main #album .main_right .main_top h3 {
+    font-size: 1.5625rem;
+    margin-bottom: 20px;
+}
 main #album .main_right .main_top h2 {
     font-family: 'G마켓B';
     font-size: 3rem;
-    margin-bottom: 30px;
     line-height: 60px;
-}
-main #album .main_right .main_top h3 {
-    font-size: 1.875rem;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 main #album .main_right .main_top p {
     color:#aaa;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 }
 main #album .main_right .main_mid {}
-main #album .main_right .main_mid dl {margin-bottom: 50px;}
+main #album .main_right .main_mid dl {margin-bottom: 40px;}
 main #album .main_right .main_mid dl dt {
     margin-bottom: 10px;
 }
@@ -143,7 +153,8 @@ main #album .main_right .main_mid dl dt i {
     margin-right: 5px;
 }
 main #album .main_right .main_mid dl dd {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    line-height: 20px;
 }
 main #album .main_right .main_btm {}
 main #album .main_right .main_btm a:first-child {
@@ -161,6 +172,7 @@ main .albumList_bg {
     width: 100%;
     background-color:rgba(255, 255,255, 0.3);
     position: absolute; bottom: 0;
+    z-index: 4;
 }
 main .albumList_bg .slide_size {width: 850px; position: relative; margin: 0 auto;}
 main #albumList {
@@ -187,45 +199,44 @@ main #album .swiper-button-next {
 }
 /*  */
 main #top100 {
-    background: #000;
-    height: 100vh; margin: 0 auto;
-    padding: 55px 0;
+    background:#000;
+    margin: 0 auto;
     text-align: center;
 }
 main #top100 h2 {
     font-size: 1.5625rem;
     font-weight: 700;
     color:#00D344;
-    margin-bottom: 40px;
+    margin:50px 0 40px;
 }
 main #top100 ul {
-    width: 1060px; margin: 0 auto;
+    width: 950px; margin: 0 auto;
     display: flex; flex-flow: row wrap;
     justify-content: space-between;
 }
 main #top100 ul li {
-    width: 250px;
+    width: 220px;
     position: relative;
     text-align: center;
 }
 main #top100 ul li > p {
-    height: 250px; 
+    height: 220px; 
     position: relative;
 }
 main #top100 ul li > p img {width: 100%; border-radius: 22px;}
 main #top100 ul li .txt {
-    position: absolute; bottom:70px; left:20px;
+    position: absolute; bottom:80px; left:20px;
     text-align: left;
     z-index: 600;
 }
 main #top100 ul li .txt p em {
-    font-size: 1.5625rem;
-    font-weight: 900;
-    line-height: 2rem;
-}
-main #top100 ul li .txt p:first-child {margin-bottom: 20px;}
-main #top100 ul li .txt p {
     font-size: 1.25rem;
+    font-weight: 900;
+    line-height: 28px;
+}
+main #top100 ul li .txt p:first-child {margin-bottom: 10px;}
+main #top100 ul li .txt p {
+    font-size: 1rem;
     color:#fff;
 }
 main #top100 ul li a {
@@ -240,14 +251,14 @@ main #top100 ul li a {
 }
 main #top100 ul li a:hover {background: #00D344; border:1px solid #000;}
 main #top100 ul li a:hover i {color: #000;}
-main #top100 ul li a:nth-child(2) {margin-right:20px;}
+main #top100 ul li a:last-child {margin-left: 20px;}
 main #top100 ul li a i {
     color:#00D344;
     line-height: 40px;
     font-size: 1.25rem;
 }
 main #top100 ul li .bg {
-    width: 250px; height: 250px;
+    width: 220px; height: 220px;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
     position: absolute; top:0; left: 0;
@@ -274,6 +285,7 @@ main .more_btn:hover {background: #00D344; color: #000;}
 main .down {
     display: block;
     color: rgba(255,255,255,0.6);
+    position: absolute; left:50%; transform: translateX(-50%);
     /* 애니메이션 */
     animation: moveUpDown 0.5s infinite cubic-bezier(0.61, 0.04, 0.48, 0.97) alternate;
 }
@@ -287,10 +299,8 @@ main .down i {
     font-size: 1.5rem;
 }
 main #ups {
-    height: 100vh;
     background: #000;
     text-align: center;
-    padding-top: 70px;
 }
 main #ups .ups_top,main #ups .ups_btm {
     width: 860px;
@@ -303,6 +313,7 @@ main #ups h3 {
     text-align: left;
     margin-bottom: 20px;
 }
+main #ups h3:first-child {margin-top: 52px;}
 main #ups .ups_1 {border-left: 10px solid #00D344; margin-bottom: 20px;}
 main #ups .ups_2 {border-left: 10px solid #00D344; margin-bottom: 40px;}
 main #ups .ups_3 {border-left: 10px solid #9C00D3; margin-bottom: 20px;}
@@ -312,7 +323,7 @@ main #ups .ups {
     background-color: #fff;
     border-bottom-right-radius: 20px;
     display: flex; justify-content: space-between;
-    padding: 30px;
+    padding: 20px 30px;
 }
 main #ups .ups .txt {}
 main #ups .ups .txt h4 {
@@ -333,9 +344,15 @@ main #ups .ups .price p {
 }
 main #ups .ups .price p:nth-child(1) {width: 100px; margin-right: 30px;}
 main #ups .ups .price p:nth-child(2) {width: 150px;}
-main #ups .ups .price p em {
+main #ups .ups_top .ups .price p em {
     font-size: 1.875rem;
     font-weight: 700;
+    color: #00D344;
+}
+main #ups .ups_btm .ups .price p em {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #9C00D3;
 }
 main #ups .ups .price a {
     display: block;
@@ -349,11 +366,14 @@ main #ups .ups .price a {
 }
 main #ups .ups .price a:hover {background: #00D344; color:#000; font-weight: 700;}
 main #dj {
-    background: #f2f2f2;
-    padding: 130px 0;
+    /* background-color: #f2f2f2; */
+    position: relative;
 }
-main #dj .dj_top,main #dj .dj_btm {width: 1060px; margin: 0 auto;}
-main #dj .dj_top {margin-bottom: 50px;}
+
+main #dj .dj_btm {
+    width: 1060px; margin: 0 auto; 
+    position: absolute; left:50%; bottom: 280px; transform: translateX(-50%);
+}
 main #dj .title {
     display: flex; align-items: center; justify-content: space-between;
 }
@@ -369,15 +389,10 @@ main #dj .title a i {
 main #dj ul {
     display: flex; justify-content: space-between;
 }
-main #dj ul li {width: 250px;}
+main #dj ul li {width: 250px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);}
 main #dj ul li a {}
-main #dj ul li a .img {height: 250px;}
+main #dj ul li a .img {height: 200px;}
 main #dj ul li a .dj_bg {background: #fff; transition: all 0.5s;}
-/* dj img */
-main #dj .dj_top ul li:nth-child(1) a .img {background: url(../images/dj_1.jpg) no-repeat;}
-main #dj .dj_top ul li:nth-child(2) a .img {background: url(../images/dj_2.jpg) no-repeat;}
-main #dj .dj_top ul li:nth-child(3) a .img {background: url(../images/dj_3.jpg) no-repeat;}
-main #dj .dj_top ul li:nth-child(4) a .img {background: url(../images/dj_4.jpg) no-repeat;}
 main #dj .dj_btm ul li:nth-child(1) a .img {background: url(../images/dj_2_1.jpg) no-repeat;}
 main #dj .dj_btm ul li:nth-child(2) a .img {background: url(../images/dj_2_2.jpg) no-repeat;}
 main #dj .dj_btm ul li:nth-child(3) a .img {background: url(../images/dj_2_3.jpg) no-repeat;}
@@ -427,20 +442,22 @@ main #dj ul li a:hover .tag span {
 footer {
     color:#fff;
     background: #000;
-    padding: 50px;
+    padding: 30px; width: 100%;
+    /* position: relative; top:-500px; */
+    position: absolute; left:0; bottom: 0;
 }
 footer .footer_bg {
     width: 1200px; margin: 0 auto;
     display: flex; justify-content: space-between;
 }
 footer .logo {}
-footer .logo h1 {width: 183px;}
+footer .logo h1 {width: 120px;}
 footer .logo h1 a {}
 footer .logo h1 a img {width: 100%;}
 footer .logo p {
     font-size: 0.875rem;
-    line-height: 30px;
-    margin: 30px 0;
+    line-height: 20px;
+    margin: 20px 0;
 }
 footer .logo .call {
     font-size: 0.875rem;
@@ -471,11 +488,13 @@ footer .infor p {
 footer .infor a {
     font-size: 0.875rem;
     color:#fff;
-    margin-bottom: 23px;
+    margin-bottom: 10px;
 }
 footer .infor a:last-child {margin: 0;}
-footer .right {}
-footer .right .mail {margin-bottom: 80px;}
+footer .right {
+    display: flex; flex-flow: column nowrap; align-items: flex-end;
+}
+footer .right .mail {margin-bottom: 30px;}
 footer .right .mail p {
     margin-bottom: 20px;
 }
@@ -506,15 +525,16 @@ footer .right .mail form button {
     background-color: #00D344;
     border-radius: 5px;
 }
-footer .sns {display: flex;}
-footer .sns a {
-    width: 50px; height: 50px;
+footer .right .sns {display: flex;}
+footer .right .sns a {
+    display: block;
+    width: 30px; height: 30px;
     border-radius: 25px;
     background: #00D344;
     text-align: center;
-    }
-    footer .sns a:nth-child(2) {margin: 0 15px;}
-footer .sns a i {
-    color:#000; line-height: 50px;
-    font-size: 1.7rem;
+}
+footer .sns a:nth-child(2) {margin: 0 15px;}
+footer .right .sns a i {
+    color:#000; line-height: 30px;
+    font-size: 1.2rem;
 }
