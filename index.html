@@ -59,7 +59,7 @@
                 <div class="album_main">
                     <div class="album_img">
                         <img class="record_1" src="./images/record/record_1.png" alt="">
-                        <img class="record_2" src="./images/record/record_2.png" alt="">
+                        <div class="record_ani"><img class="record_2" src="./images/record/record_2.png" alt=""></div>
                     </div>
                     <div class="main_right">
                         <div class="main_top">
@@ -502,15 +502,14 @@
     <!-- 내부 스크립트 -->
     <script>
         $('#wrap').fullpage()/* !!!!!!!!!!!!!!!!!!! */
-/*         gsap.fromTo('#top100 .weekly',{
-            opacity:0,
-            scale:0.5
+        gsap.fromTo('#album .record_ani',{
+            x:-10,
+            y:-230
         },{
-            opacity:1,
-            scale:1.2,
+            x:50,
             duration:1,
-            scrollTrigger:'#top100'
-        }) */
+            scrollTrigger:'#album'
+        })
     </script>
 </body>
 </html>

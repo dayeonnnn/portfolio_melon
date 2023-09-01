@@ -72,7 +72,8 @@ main .txt p em {
     color: #00D344;
 }
 main .btn {}
-main .btn button {
+main .btn a {
+    display: inline-block;
     background: none;
     border: 3px solid #00D344;
     font-size: 1.5rem;
@@ -82,11 +83,11 @@ main .btn button {
     font-family: '티머니';
     color:#00D344;
 }
-main .btn button:hover {
+main .btn a:hover {
     background: #00D344;
     color:#000;
 }
-main .btn button:first-child {margin-right: 50px;}
-main .btn button i {
+main .btn a:first-child {margin-right: 50px;}
+main .btn a i {
     margin-left: 10px;
 }
