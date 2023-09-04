@@ -1,0 +1,93 @@
+main {background: #f2f2f2; width: 100%; height: 100%;}
+main #dj {
+    /* background-color: #f2f2f2; */
+    position: relative; padding-top: 110px;
+    margin-bottom: 100px;
+}
+main #dj h2 {
+    font-family: '티머니';
+    text-align: center;
+    font-size: 1.8125rem;
+    margin-top: 100px;
+    color: #00D344;
+}
+main #dj .dj_btm {
+    width: 1060px; margin: 0 auto; 
+    padding: 50px 0;
+}
+main #dj .title {
+    display: flex; align-items: center; justify-content: space-between;
+}
+main #dj .title h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 17px;
+}
+main #dj .title a {}
+main #dj .title a i {
+    color:#aaa; font-size: 1.5rem; position: relative; top:-5px
+}
+main #dj ul {
+    display: flex; justify-content: space-between;
+}
+main #dj ul li {width: 250px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);}
+main #dj ul li a {}
+main #dj ul li a .img {height: 250px;}
+main #dj ul li a .dj_bg {background: #fff; transition: all 0.5s;}
+/*  */
+main #dj .dj_1 ul li:nth-child(1) a .img {background: url(../images/dj/dj1_1.jpg) no-repeat;}
+main #dj .dj_1 ul li:nth-child(2) a .img {background: url(../images/dj/dj1_2.jpg) no-repeat;}
+main #dj .dj_1 ul li:nth-child(3) a .img {background: url(../images/dj/dj1_3.jpg) no-repeat;}
+main #dj .dj_1 ul li:nth-child(4) a .img {background: url(../images/dj/dj1_4.jpg) no-repeat;}
+/*  */
+main #dj .dj_2 ul li:nth-child(1) a .img {background: url(../images/dj/dj2_1.jpg) no-repeat; background-size: cover;}
+main #dj .dj_2 ul li:nth-child(2) a .img {background: url(../images/dj/dj2_2.jpg) no-repeat; background-size: cover;}
+main #dj .dj_2 ul li:nth-child(3) a .img {background: url(../images/dj/dj2_3.jpg) no-repeat; background-size: cover;}
+main #dj .dj_2 ul li:nth-child(4) a .img {background: url(../images/dj/dj2_4.jpg) no-repeat; background-size: cover;}
+/*  */
+main #dj .dj_3 ul li:nth-child(1) a .img {background: url(../images/dj/dj3_1.jpg) no-repeat;}
+main #dj .dj_3 ul li:nth-child(2) a .img {background: url(../images/dj/dj3_2.jpg) no-repeat;}
+main #dj .dj_3 ul li:nth-child(3) a .img {background: url(../images/dj/dj3_3.jpg) no-repeat;}
+main #dj .dj_3 ul li:nth-child(4) a .img {background: url(../images/dj/dj3_4.jpg) no-repeat;}
+/*  */
+main #dj ul li a .dj_txt {padding: 30px 0 0 20px;}
+main #dj ul li a .dj_txt .title {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    line-height: 29px;
+}
+main #dj ul li a .dj_txt .sub {}
+main #dj ul li a .dj_txt .sub em {color:#9C00D3}
+main #dj ul li a .heart {
+    color:#aaa;
+    padding: 20px 0 0 20px;
+}
+main #dj ul li a .heart i {margin-right: 15px;}
+main #dj ul li a .heart span {}
+main #dj ul li a .heart span:nth-child(2)::after {
+    content: '';
+    display: inline-block;
+    width: 1px; height:13px;
+    background: #aaa;
+    margin: 0 15px;
+}
+main #dj ul li a .tag {
+    padding: 20px 0 30px 20px;
+}
+main #dj ul li a .tag span {
+    display: inline-block;
+    color: #aaa;
+    font-size: 0.75rem;
+    border:1px solid #aaa;
+    border-radius: 50px;
+    padding: 5px 10px;
+}
+main #dj ul li a:hover .img {background-size: 50%;}
+main #dj ul li a:hover .dj_bg {background-color: #000;}
+main #dj ul li a:hover .dj_txt p em {font-weight: 700;}
+main #dj ul li a:hover .dj_txt {color:#fff;}
+main #dj ul li a:hover .heart i {color: #FF004C;}
+main #dj ul li a:hover .tag span {
+    background: #00D344; border:1px solid #00D344; color:#000;
+    font-weight: 700;
+}

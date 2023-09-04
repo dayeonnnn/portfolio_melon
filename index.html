@@ -9,35 +9,45 @@
     <link rel="icon" href="./images/icon.png" type="image/x-icon">
     <!-- 폰트어썸 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- 기본 -->
     <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/common.css">
     <link rel="stylesheet" href="./style/index.css">
     <link rel="stylesheet" href="./style/jquery.fullPage.css">
+    <link rel="stylesheet" href="./style/common_resposive.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <style>
+        footer {position: absolute; left:0; bottom: 0;}
+    </style>
 </head>
 <body>
     <header>
         <div class="header_bg">
             <nav>
-                <h1><a href=""><img src="./images/logo.png" alt="Melon"></a></h1>
+                <h1><a href="./popup.html"><img src="./images/logo.png" alt="Melon"></a></h1>
                 <ul>
-                    <li><a href="#">멜론차트</a></li>
+                    <li><a href="./chart.html">멜론차트</a></li>
                     <li><a href="#">최신음악</a></li>
-                    <li><a href="#">멜론DJ</a></li>
-                    <li><a href="#">매거진</a></li>
+                    <li><a href="./dj.html">멜론DJ</a></li>
+                    <li><a href="./magazine.html">매거진</a></li>
                     <li><a href="#">마이뮤직</a></li>
                 </ul>
                 <!-- 햄버거 메뉴 -->
-                <span></span><span></span><span></span>
-                <div class="m_nav_open">
+                <div class="m_nav">
+                    <a href="#">
+                        <span></span><span></span><span></span>
+                    </a>
+                </div>
+                <div class="m_nav_open showHide">
                     <div class="m_nav_top">
-                        <a href="#">멜론차트</a>
+                        <a href="./chart.html">멜론차트</a>
                         <a href="#">최신음악</a>
-                        <a href="#">멜론DJ</a>
-                        <a href="#">매거진</a>
+                        <a href="./dj.html">멜론DJ</a>
+                        <a href="./magazine.html">매거진</a>
                         <a href="#">마이뮤직</a>
                     </div>
-                    <a href="#">Login</a>
+                    <a href="#"><i class="fa-solid fa-user"></i>Login</a>
                 </div>
             </nav>
             <div class="nav_right">
@@ -196,7 +206,7 @@
                         <div class="hover">
                             <div class="txt">
                                 <p><em>Ditto</em></p>
-                                <p>NewJeans</p>
+                                <p>New Jeans</p>
                             </div>
                             <div class="bg"></div>
                         </div>
@@ -262,94 +272,6 @@
                 <a href="#" class="down"><i class="fa-solid fa-angles-down"></i></a>
             </div>
             <div id="dj" class="section">
-<!--                 <div class="dj_top">
-                    <div class="title">
-                        <h3>먼지 쌓인 LP 같은 빈티지 무드</h3>
-                        <a href="#"><i class="fa-regular fa-square-plus"></i></a>
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <div class="img"></div>
-                                <div class="dj_bg">
-                                    <div class="dj_txt">
-                                        <p class="title">나른하게 젖어들다.<br>몽환적인 드림팝</p>
-                                        <p class="sub"><em>DJ</em> INDIE마스터</p>
-                                    </div>
-                                    <div class="heart">
-                                        <i class="fa-regular fa-heart"></i>
-                                        <span>435</span>
-                                        <span>25곡</span>
-                                    </div>
-                                    <div class="tag">
-                                        <span>#인디</span>
-                                        <span>#몽환적인</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="img"></div>
-                                <div class="dj_bg">
-                                    <div class="dj_txt">
-                                        <p class="title">LP로 듣고 싶은<br>빈티지 재즈</p>
-                                        <p class="sub"><em>DJ</em> 음악이주는힘</p>
-                                    </div>
-                                    <div class="heart">
-                                        <i class="fa-regular fa-heart"></i>
-                                        <span>236</span>
-                                        <span>29곡</span>
-                                    </div>
-                                    <div class="tag">
-                                        <span>#빈티지</span>
-                                        <span>#재즈바</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="img"></div>
-                                <div class="dj_bg">
-                                    <div class="dj_txt">
-                                        <p class="title">듣는 순간 빠져드는<br>빈티지 감성 POP</p>
-                                        <p class="sub"><em>DJ</em> Dayeon</p>
-                                    </div>
-                                    <div class="heart">
-                                        <i class="fa-regular fa-heart"></i>
-                                        <span>521</span>
-                                        <span>54곡</span>
-                                    </div>
-                                    <div class="tag">
-                                        <span>#빈티지</span>
-                                        <span>#감성</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="img"></div>
-                                <div class="dj_bg">
-                                    <div class="dj_txt">
-                                        <p class="title">반짝이는 Lofi와 하루를<br>달콤하게</p>
-                                        <p class="sub"><em>DJ</em> Jiwoon</p>
-                                    </div>
-                                    <div class="heart">
-                                        <i class="fa-regular fa-heart"></i>
-                                        <span>469</span>
-                                        <span>45곡</span>
-                                    </div>
-                                    <div class="tag">
-                                        <span>#힐링</span>
-                                        <span>#기분전환</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div> -->
                 <div class="dj_btm">
                     <div class="title">
                         <h3>공허한 나를 위로해 주는 건 음악뿐</h3>
@@ -441,7 +363,7 @@
                 <footer>
                     <div class="footer_bg">
                         <div class="logo">
-                            <h1><a href="#"><img src="./images/logo.png" alt="Melon"></a></h1>
+                            <h1><a href="./index.html"><img src="./images/logo.png" alt="Melon"></a></h1>
                             <p>경기도 성남시 분당구 판교역로 221<br>대표이사 : 이진수, 김성수</p>
                             <div class="call">
                                 <i class="fa-solid fa-phone"></i>1566-7727 (평일 09:00-18:00, 유료)
@@ -490,6 +412,7 @@
             </div>
         </div>
     </main>
+    <script src="./script/common.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./script/index.js"></script>

@@ -1,0 +1,184 @@
+main {
+    padding-top: 110px;
+    width: 1200px;
+    margin: 0 auto;
+}
+main .top100 {
+    display: flex;
+    justify-content: space-between;
+}
+main .top100 .top100_bg {
+    position: absolute;
+    width: 1200px; height: 175px;
+    background-color: #f2f2f2;
+    z-index: 1;
+}
+main .top100 h3 {
+    font-size: 1.5625rem;
+    font-weight: 700;
+    margin: 73px 0 10px 20px;
+    position: relative;
+    z-index: 2;
+}
+main .top100 h2 {
+    font-size: 2.5rem;
+    color: #00d344;
+    font-weight: 700;
+    position: relative;
+    z-index: 3;
+    margin-left: 20px;
+}
+main .top100 .top100_right {
+    margin-top: 73px;
+    width: 990px; 
+}
+main .top100 .top100_right #top100List {}
+main .top100 .top100_right #top100List .swiper-wrapper {}
+main .top100 .top100_right #top100List .swiper-wrapper .swiper-slide {
+    width: 250px;
+    margin-right: 20px;
+}
+main .top100 .top100_right #top100List .swiper-wrapper .swiper-slide .top100_img {position: relative;}
+main .top100 .top100_right #top100List .swiper-wrapper .swiper-slide .top100_img .img {
+    width: 250px; height: 250px;
+}
+main .top100 .top100_right #top100List .swiper-wrapper .swiper-slide .top100_img .img  img {
+    width: 100%;
+    border-radius: 20px;
+}
+main .top100 .top100_right #top100List .swiper-wrapper .swiper-slide .top100_img .txt {
+    font-size: 1.25rem;
+    line-height: 32px;
+    font-weight: 900;
+    color:#fff;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+    position: absolute; bottom: 30px; left:20px;
+    z-index: 11;
+}
+main .top100 .top100_right #top100List .swiper-wrapper .swiper-slide .top100_img .bg {
+    width: 250px; height: 130px;
+    border-radius: 20px;
+    background: rgb(0,211,68);
+    background: linear-gradient(0deg, rgba(0,211,68,1) 0%, rgba(0,211,68,0) 100%);
+    position: absolute; bottom:0; left:0;
+    z-index: 10;
+}
+main .top100 .top100_right #top100List .swiper-wrapper .swiper-slide .top_icon {
+    position: absolute; bottom:-20px; left:50%; transform: translateX(-50%);
+    z-index: 15;
+}
+main .top100 .top100_right #top100List .swiper-wrapper .swiper-slide a {
+    display: inline-block;
+    width: 40px; height: 40px;
+    background: #000; border:1px solid #00D344;
+    border-radius: 50px;
+    text-align: center;
+}
+main .top100 .top100_right #top100List .swiper-wrapper .swiper-slide a:last-child {margin-left: 20px;}
+main .top100 .top100_right #top100List .swiper-wrapper .swiper-slide a i {
+    color:#00D344;
+    line-height: 40px;
+    font-size: 1.25rem;
+}
+main .top100 .top100_right #top100List .swiper-wrapper .swiper-slide a:hover i {
+    color: #000;
+}
+main .top100 .top100_right #top100List .swiper-wrapper .swiper-slide a:hover {
+    background: #00D344; border:2px solid #000;
+}
+main .top100 .top100_right #top100List > p {margin-top: 50px;     text-align: right;}
+main .chart {
+    width: 1200px;
+    margin: 0 auto;
+}
+main .chart .chart_top {
+    display: flex; flex-flow: row nowrap;
+    justify-content: center;
+    margin: 100px 0 30px;
+}
+main .chart .chart_top a {
+    padding: 7px 10px;
+    border:1px solid #00D344;
+    border-radius: 50px;
+    color: #6f6f6f;
+    margin-right: 5px;
+    display: inline-block;
+}
+main .chart .chart_top a i {
+    color: #00D344;
+}
+main .chart .chart_top a span {}
+main .chart .chart_list {}
+main .chart .chart_list .title {
+    display: flex;
+    text-align: center;
+    border-top: 2px solid #7b7b7b;
+    border-bottom: 1px solid #7b7b7b;
+}
+main .chart .chart_list .title li {line-height: 40px;}
+main .chart .chart_list .title .li1 {width: 33px; position: relative ; top:13px;}
+main .chart .chart_list .title .li2 {width: 50px;}
+main .chart .chart_list .title .li3 {width: 50px;}
+main .chart .chart_list .title .li4 {width: 120px;}
+main .chart .chart_list .title .li5 {width: 300px; text-align: left; padding-left: 10px;}
+main .chart .chart_list .title .li6 {width: 250px; text-align: left; padding-left: 10px;}
+main .chart .chart_list .title .li7 {width: 117px;}
+main .chart .chart_list .title .li8 {width: 70px;}
+main .chart .chart_list .title .li9 {width: 70px;}
+main .chart .chart_list .title .li10 {width: 70px;}
+main .chart .chart_list .title .li11 {width: 70px;}
+main .chart .chart_list .list {
+    display: flex; height: 140px;
+    text-align: center;
+    border-bottom: 1px solid #7b7b7b;
+}
+main .chart .chart_list .list:hover {
+    background:rgba(0, 243, 68, 0.07) ;
+}
+main .chart .chart_list .list li {line-height: 140px;}
+main .chart .chart_list .list .li1 {width: 33px; position: relative; top:62px;}
+main .chart .chart_list .list .li1 form {}
+main .chart .chart_list .list .li1 form fieldset {}
+main .chart .chart_list .list .li1 form fieldset input {}
+main .chart .chart_list .list .li2 {width: 50px;}
+main .chart .chart_list .list .li3 {width: 50px;}
+main .chart .chart_list .list .li3 .fa-caret-up {font-size: 0.8rem; color:#FF2D2D;}
+main .chart .chart_list .list .li3 .fa-caret-down {font-size: 0.8rem; color:#3959FF;}
+main .chart .chart_list .list .li3 span {
+    display: block; width: 25px; height: 3px;
+    background: #d9d9d9; position: relative; top:69px;
+    margin: 0 auto;
+}
+main .chart .chart_list .list .li4 {width: 120px; position: relative; top:20px}
+main .chart .chart_list .list .li4 img {width: 100px;}
+main .chart .chart_list .list .li5 span:first-child {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+main .chart .chart_list .list .li5 {
+    text-align: left; padding-left: 10px;
+    width: 300px; display: flex; flex-flow: column nowrap;
+    justify-content: center;
+}
+main .chart .chart_list .list .li5 span {}
+main .chart .chart_list .list .li6 {
+    width: 250px;
+    text-align: left; padding-left: 10px;
+    color:#7b7b7b
+}
+main .chart .chart_list .list .li7 {width: 117px;}
+main .chart .chart_list .list .li7 i {color:#ff004c}
+main .chart .chart_list .list .li7 span {color:#7b7b7b;}
+main .chart .chart_list .list .li8,
+main .chart .chart_list .list .li9,
+main .chart .chart_list .list .li10,
+main .chart .chart_list .list .li11 {width: 70px; position: relative; top:13px;}
+main .chart .chart_list .list .li8 img,
+main .chart .chart_list .list .li9 img,
+main .chart .chart_list .list .li10 img,
+main .chart .chart_list .list .li11 img {}
+main .chart .chart_list > a {
+    display: block; width: 50px; 
+    margin: 50px auto 100px;
+}
+main .chart .chart_list > a img {}
