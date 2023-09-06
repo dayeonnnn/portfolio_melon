@@ -1,9 +1,10 @@
 main {
     padding-top: 110px;
-    width: 1200px;
-    margin: 0 auto;
+
 }
 main .top100 {
+    width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
@@ -196,3 +197,58 @@ main .chart .chart_list > a {
     margin: 50px auto 100px;
 }
 main .chart .chart_list > a img {}
+main .playing_bg {
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0px -3px 10px 0px rgba(0, 0, 0, 0.10);
+    z-index: 999;
+}
+main .playing_bg .playing {
+    width: 1200px; margin: 0 auto; justify-content: space-between; align-items: center;
+    display: flex;
+}
+main .playing_bg .playing .icon {
+    display: flex; align-items: center;
+}
+main .playing_bg .playing .icon a {}
+main .playing_bg .playing .icon a img {}
+main .playing_bg .playing .icon .prev {}
+main .playing_bg .playing .icon .stop {
+    margin: 0 10px;
+}
+main .playing_bg .playing .icon .next {}
+main .playing_bg .playing .time_bg {
+    width: 650px; height: 5px;
+    background-color: #d9d9d9;
+    position: relative;
+}
+main .playing_bg .playing .time_bg .time {
+    width: 650px; height: 5px;
+    background-color: #6f6f6f;
+    animation: time 120s linear infinite;
+    transform-origin: left;
+}
+@keyframes time {
+    0% {transform:scaleX(0)}
+    100% {transform: scaleX(1);}
+}
+main .playing_bg .playing .time_bg p {
+    width: 12px; height: 12px; background-color:#00D344; border-radius: 50px;
+    border: 1px solid #000;
+    animation: play 120s linear infinite;
+}
+@keyframes play {
+    0% {position: relative; left:0; top:-8px;}
+    100% {position: relative; left:650px; top:-8px;}
+}
+main .playing_bg .playing .album {
+    display: flex; align-items: center;
+}
+main .playing_bg .playing .album a {}
+main .playing_bg .playing .album a:nth-child(2) {margin: 0 20px;}
+main .playing_bg .playing .album a img {}
+main .playing_bg .playing .album > img {
+    width: 50px; height: 50px;
+}
