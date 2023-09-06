@@ -1,3 +1,14 @@
+/* 스크롤 */
+html {scrollbar-width: 10px;;scrollbar-color: #222 #f1f1f1;}
+/* Opera */
+html::-o-scrollbar {width: 10px;}/*스크롤바 크기*/
+html::-o-scrollbar-thumb {background-color: #222;border-radius: 5px;}/*스크롤 드래그바*/
+html::-o-scrollbar-thumb:hover {background-color: #00D344;}
+/* Chrome, Safari, Edge 등 웹킷 기반 브라우저 */
+::-webkit-scrollbar {width: 10px;}/*스크롤바 크기*/
+::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);}/*스크롤바 배경*/
+::-webkit-scrollbar-thumb {background-color: #222;border-radius: 5px;}/*스크롤 드래그바*/
+::-webkit-scrollbar-thumb:hover {background-color: #00D344;}
 header {
     height: 110px; width: 100%;
     background: #000;
@@ -37,13 +48,14 @@ header nav .m_nav a {
     display: flex; flex-flow: column nowrap; justify-content: space-between;
     position: absolute; right:50px; top:42px;
 }
-header nav span {
-    display: none;
+header nav .m_nav {display: none;}
+header nav .m_nav span {
     width: 100%; height: 4px;
     background: #00D344;
     border-radius: 5px;
 }
 header nav .m_nav_open {
+    display: none;
     width: 250px; height: 100vh;
     position: absolute; top:110px; right: 0;
     background: rgba(0, 0, 0, 0.8);

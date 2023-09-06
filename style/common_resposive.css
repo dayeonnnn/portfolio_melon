@@ -1,8 +1,8 @@
 @media screen and (max-width:1200px) {
     header .header_bg {padding: 0 50px;}
     header nav ul {display: none;}
-    header nav .m_nav_open {display: block;}
-    header nav span {display: block;}
+    header nav .m_nav {display: block;}
     header .nav_right a {display: none;}
     header .nav_right form fieldset {position: relative; right:30px;}
+    header nav .m_nav {display: block;}
 }

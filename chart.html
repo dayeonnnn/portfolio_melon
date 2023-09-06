@@ -18,46 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 </head>
 <body>
-    <header>
-        <div class="header_bg">
-            <nav>
-                <h1><a href=""><img src="./images/logo.png" alt="Melon"></a></h1>
-                <ul>
-                    <li><a href="#">멜론차트</a></li>
-                    <li><a href="#">최신음악</a></li>
-                    <li><a href="#">멜론DJ</a></li>
-                    <li><a href="#">매거진</a></li>
-                    <li><a href="#">마이뮤직</a></li>
-                </ul>
-                <!-- 햄버거 메뉴 -->
-                <div class="m_nav">
-                    <a href="#">
-                        <span></span><span></span><span></span>
-                    </a>
-                </div>
-                <div class="m_nav_open showHide">
-                    <div class="m_nav_top">
-                        <a href="#">멜론차트</a>
-                        <a href="#">최신음악</a>
-                        <a href="#">멜론DJ</a>
-                        <a href="#">매거진</a>
-                        <a href="#">마이뮤직</a>
-                    </div>
-                    <a href="#"><i class="fa-solid fa-user"></i>Login</a>
-                </div>
-            </nav>
-            <div class="nav_right">
-                <form action="#" method="get">
-                    <fieldset>
-                        <legend class="skip">검색양식</legend>
-                        <input type="text" placeholder="헤이즈X정승환의 '언젠간 괜찮아질 이야기'">
-                        <button type="button"><img src="./images/search.png" alt="검색"></button>
-                    </fieldset>
-                </form>
-                <a href="#"><i class="fa-solid fa-user"></i></a>
-            </div>
-        </div>
-    </header>
+    <?php include('./header.php') ?>
     <main>
         <div class="top100">
             <div class="top100_bg"></div>
@@ -198,7 +159,8 @@
                         <form action="#" method="get">
                             <fieldset>
                                 <legend class="skip">체크박스</legend>
-                                <input type="checkbox">
+                                <div class="check"></div>
+                                <input type="checkbox" id="num">
                             </fieldset>
                         </form>
                     </li>
@@ -215,18 +177,23 @@
                 </ul>
                 <ul class="list">
                     <li class="li1">
-                        <form action="#" method="get">
                             <fieldset>
                                 <legend class="skip">체크박스</legend>
-                                <input type="checkbox">
+                                <div class="check"></div>
+                                <input type="checkbox" id="num1">
                             </fieldset>
-                        </form>
                     </li>
                     <li class="li2">1</li>
                     <li class="li3"><span><!-- 순위변동 --></span></li>
                     <li class="li4"><img src="./images/top1.jpg" alt="Seven"></li>
-                    <li class="li5"><span>Seven (feat. Latto) - Clean Ver.</span><span>정국</span></li>
-                    <li class="li6">Seven (feat. Latto) - Clean Ver.</li>
+                    <li class="li5">
+                        <label for="num1">
+                            <span>Seven (feat. Latto) - Clean Ver.</span><span>정국</span>
+                        </label>
+                    </li>
+                    <li class="li6">
+                        <label for="num1">Seven (feat. Latto) - Clean Ver.</label>
+                    </li>
                     <li class="li7"><i class="fa-regular fa-heart"></i><span> 171,411</span></li>
                     <li class="li8"><a href="#"><img src="./images/top100_play.png" alt="play"></li></a>
                     <li class="li9"><a href="#"><img src="./images/top100_plus.png" alt="plus"></li></a>
@@ -235,18 +202,23 @@
                 </ul>
                 <ul class="list">
                     <li class="li1">
-                        <form action="#" method="get">
-                            <fieldset>
-                                <legend class="skip">체크박스</legend>
-                                <input type="checkbox">
-                            </fieldset>
-                        </form>
+                        <fieldset>
+                            <legend class="skip">체크박스</legend>
+                            <div class="check"></div>
+                            <input type="checkbox" id="num2">
+                        </fieldset>
                     </li>
                     <li class="li2">2</li>
                     <li class="li3"><span><!-- 순위변동 --></span></li>
                     <li class="li4"><img src="./images/top2.jpg" alt="Seven"></li>
-                    <li class="li5"><span>Super Shy</span><span>NewJeans</span></li>
-                    <li class="li6">NewJeans 2nd EP 'Get Up'</li>
+                    <li class="li5">
+                        <label for="num2">
+                            <span>Super Shy</span><span>NewJeans</span>
+                        </label>
+                    </li>
+                    <li class="li6">
+                        <label for="num2">NewJeans 2nd EP 'Get Up'</label>
+                    </li>
                     <li class="li7"><i class="fa-regular fa-heart"></i><span> 164,156</span></li>
                     <li class="li8"><a href="#"><img src="./images/top100_play.png" alt="play"></li></a>
                     <li class="li9"><a href="#"><img src="./images/top100_plus.png" alt="plus"></li></a>
@@ -255,18 +227,23 @@
                 </ul>
                 <ul class="list">
                     <li class="li1">
-                        <form action="#" method="get">
-                            <fieldset>
-                                <legend class="skip">체크박스</legend>
-                                <input type="checkbox">
-                            </fieldset>
-                        </form>
+                        <fieldset>
+                            <legend class="skip">체크박스</legend>
+                            <div class="check"></div>
+                            <input type="checkbox" id="num3">
+                        </fieldset>
                     </li>
                     <li class="li2">3</li>
                     <li class="li3"><span><!-- 순위변동 --></span></li>
                     <li class="li4"><img src="./images/top2.jpg" alt="Seven"></li>
-                    <li class="li5"><span>ETA</span><span>NewJeans</span></li>
-                    <li class="li6">NewJeans 2nd EP 'Get Up'</li>
+                    <li class="li5">
+                        <label for="num3">
+                            <span>ETA</span><span>NewJeans</span>
+                        </label>
+                    </li>
+                    <li class="li6">
+                        <label for="num3">NewJeans 2nd EP 'Get Up'</label>
+                    </li>
                     <li class="li7"><i class="fa-regular fa-heart"></i><span> 142,484</span></li>
                     <li class="li8"><a href="#"><img src="./images/top100_play.png" alt="play"></li></a>
                     <li class="li9"><a href="#"><img src="./images/top100_plus.png" alt="plus"></li></a>
@@ -275,18 +252,21 @@
                 </ul>
                 <ul class="list">
                     <li class="li1">
-                        <form action="#" method="get">
-                            <fieldset>
-                                <legend class="skip">체크박스</legend>
-                                <input type="checkbox">
-                            </fieldset>
-                        </form>
+                        <fieldset>
+                            <legend class="skip">체크박스</legend>
+                            <div class="check"></div>
+                            <input type="checkbox" id="num4">
+                        </fieldset>
                     </li>
                     <li class="li2">4</li>
                     <li class="li3"><i class="fa-solid fa-caret-up"> 1</i></li>
                     <li class="li4"><img src="./images/top3.jpg" alt="Seven"></li>
-                    <li class="li5"><span>헤어지자 말해요</span><span>박재정</span></li>
-                    <li class="li6">1집 Alone</li>
+                    <li class="li5">
+                        <label for="num4">
+                            <span>헤어지자 말해요</span><span>박재정</span>
+                        </label>
+                        </li>
+                    <li class="li6"><label for="num4">1집 Alone</label></li>
                     <li class="li7"><i class="fa-regular fa-heart"></i><span> 114,164</span></li>
                     <li class="li8"><a href="#"><img src="./images/top100_play.png" alt="play"></li></a>
                     <li class="li9"><a href="#"><img src="./images/top100_plus.png" alt="plus"></li></a>
@@ -295,18 +275,21 @@
                 </ul>
                 <ul class="list">
                     <li class="li1">
-                        <form action="#" method="get">
-                            <fieldset>
-                                <legend class="skip">체크박스</legend>
-                                <input type="checkbox">
-                            </fieldset>
-                        </form>
+                        <fieldset>
+                            <legend class="skip">체크박스</legend>
+                            <div class="check"></div>
+                            <input type="checkbox" id="num5">
+                        </fieldset>
                     </li>
                     <li class="li2">5</li>
                     <li class="li3"><i class="fa-solid fa-caret-down"> 1</i></li>
                     <li class="li4"><img src="./images/top4.jpg" alt="Seven"></li>
-                    <li class="li5"><span>Fast Forward</span><span>전소미</span></li>
-                    <li class="li6">GAME PLAN</li>
+                    <li class="li5">
+                        <label for="num5">
+                            <span>Fast Forward</span><span>전소미</span>
+                        </label>
+                    </li>
+                    <li class="li6"><label for="num5">GAME PLAN</label></li>
                     <li class="li7"><i class="fa-regular fa-heart"></i><span> 101,441</span></li>
                     <li class="li8"><a href="#"><img src="./images/top100_play.png" alt="play"></li></a>
                     <li class="li9"><a href="#"><img src="./images/top100_plus.png" alt="plus"></li></a>
@@ -315,18 +298,18 @@
                 </ul>
                 <ul class="list">
                     <li class="li1">
-                        <form action="#" method="get">
-                            <fieldset>
-                                <legend class="skip">체크박스</legend>
-                                <input type="checkbox">
-                            </fieldset>
-                        </form>
+                        <fieldset>
+                            <legend class="skip">체크박스</legend>
+                            <div class="check"></div>
+                            <input type="checkbox" id="num6">
+                        </fieldset>
                     </li>
                     <li class="li2">6</li>
                     <li class="li3"><span><!-- 순위변동 --></span></li>
                     <li class="li4"><img src="./images/top5.jpg" alt="Seven"></li>
-                    <li class="li5"><span>사막에서 꽃을 피우듯</span><span>우디 (Woody)</span></li>
-                    <li class="li6">사막에서 꽃을 피우듯</li>
+                    <li class="li5">
+                        <label for="num6"><span>사막에서 꽃을 피우듯</span><span>우디 (Woody)</span></li></label>
+                    <li class="li6"><label for="num6">사막에서 꽃을 피우듯</label></li>
                     <li class="li7"><i class="fa-regular fa-heart"></i><span> 99,312</span></li>
                     <li class="li8"><a href="#"></A><img src="./images/top100_play.png" alt="play"></li></a>
                     <li class="li9"><a href="#"><img src="./images/top100_plus.png" alt="plus"></li></a>
@@ -335,18 +318,17 @@
                 </ul>
                 <ul class="list">
                     <li class="li1">
-                        <form action="#" method="get">
-                            <fieldset>
-                                <legend class="skip">체크박스</legend>
-                                <input type="checkbox">
-                            </fieldset>
-                        </form>
+                        <fieldset>
+                            <legend class="skip">체크박스</legend>
+                            <div class="check"></div>
+                            <input type="checkbox" id="num7">
+                        </fieldset>
                     </li>
                     <li class="li2">7</li>
                     <li class="li3"><span><!-- 순위변동 --></span></li>
                     <li class="li4"><img src="./images/top6.jpg" alt="Seven"></li>
-                    <li class="li5"><span>I AM</span><span>IVE (아이브)</span></li>
-                    <li class="li6">I've IVE</li>
+                    <li class="li5"><label for="num7"><span>I AM</span><span>IVE (아이브)</span></label></li>
+                    <li class="li6"><label for="num7">I've IVE</label></li>
                     <li class="li7"><i class="fa-regular fa-heart"></i><span> 98,151</span></li>
                     <li class="li8"><a href="#"><img src="./images/top100_play.png" alt="play"></li></a>
                     <li class="li9"><a href="#"><img src="./images/top100_plus.png" alt="plus"></li></a>
@@ -355,18 +337,17 @@
                 </ul>
                 <ul class="list">
                     <li class="li1">
-                        <form action="#" method="get">
-                            <fieldset>
-                                <legend class="skip">체크박스</legend>
-                                <input type="checkbox">
-                            </fieldset>
-                        </form>
+                        <fieldset>
+                            <legend class="skip">체크박스</legend>
+                            <div class="check"></div>
+                            <input type="checkbox" id="num8">
+                        </fieldset>
                     </li>
                     <li class="li2">8</li>
                     <li class="li3"><i class="fa-solid fa-caret-up"> 1</i></li>
                     <li class="li4"><img src="./images/top7.jpg" alt="Seven"></li>
-                    <li class="li5"><span>퀸카 (Queencard)</span><span>(여자)아이들</span></li>
-                    <li class="li6">I feel</li>
+                    <li class="li5"><label for="num8"><span>퀸카 (Queencard)</span><span>(여자)아이들</span></label></li>
+                    <li class="li6"><label for="num8">I feel</li>
                     <li class="li7"><i class="fa-regular fa-heart"></i><span> 81,154</span></li>
                     <li class="li8"><a href="#"><img src="./images/top100_play.png" alt="play"></li></a>
                     <li class="li9"><a href="#"><img src="./images/top100_plus.png" alt="plus"></li></a>
@@ -375,18 +356,17 @@
                 </ul>
                 <ul class="list">
                     <li class="li1">
-                        <form action="#" method="get">
-                            <fieldset>
-                                <legend class="skip">체크박스</legend>
-                                <input type="checkbox">
-                            </fieldset>
-                        </form>
+                        <fieldset>
+                            <legend class="skip">체크박스</legend>
+                            <div class="check"></div>
+                            <input type="checkbox" id="num9">
+                        </fieldset>
                     </li>
                     <li class="li2">9</li>
                     <li class="li3"><i class="fa-solid fa-caret-down"> 1</i></li>
                     <li class="li4"><img src="./images/top8.jpg" alt="Seven"></li>
-                    <li class="li5"><span>Love Lee</span><span>AKMU (악뮤)</span></li>
-                    <li class="li6">Love Lee</li>
+                    <li class="li5"><label for="num9"><span>Love Lee</span><span>AKMU (악뮤)</span></label></li>
+                    <li class="li6"><label for="num9">Love Lee</label></li>
                     <li class="li7"><i class="fa-regular fa-heart"></i><span> 80,751</span></li>
                     <li class="li8"><a href="#"><img src="./images/top100_play.png" alt="play"></li></a>
                     <li class="li9"><a href="#"><img src="./images/top100_plus.png" alt="plus"></li></a>
@@ -395,18 +375,17 @@
                 </ul>
                 <ul class="list">
                     <li class="li1">
-                        <form action="#" method="get">
-                            <fieldset>
-                                <legend class="skip">체크박스</legend>
-                                <input type="checkbox">
-                            </fieldset>
-                        </form>
+                        <fieldset>
+                            <legend class="skip">체크박스</legend>
+                            <div class="check"></div>
+                            <input type="checkbox" id="num10">
+                        </fieldset>
                     </li>
                     <li class="li2">10</li>
                     <li class="li3"><i class="fa-solid fa-caret-down"> 2</i></li>
                     <li class="li4"><img src="./images/top9.jpg" alt="Seven"></li>
-                    <li class="li5"><span>모래 알갱이</span><span>임영웅</span></li>
-                    <li class="li6">모래 알갱이</li>
+                    <li class="li5"><label for="num10"><span>모래 알갱이</span><span>임영웅</span></label></li>
+                    <li class="li6"><label for="num10">모래 알갱이</label></li>
                     <li class="li7"><i class="fa-regular fa-heart"></i><span> 77,356</span></li>
                     <li class="li8"><a href="#"><img src="./images/top100_play.png" alt="play"></li></a>
                     <li class="li9"><a href="#"><img src="./images/top100_plus.png" alt="plus"></li></a>
@@ -417,55 +396,7 @@
             </div>
         </div>
     </main>
-    <footer>
-        <div class="footer_bg">
-            <div class="logo">
-                <h1><a href="#"><img src="./images/logo.png" alt="Melon"></a></h1>
-                <p>경기도 성남시 분당구 판교역로 221<br>대표이사 : 이진수, 김성수</p>
-                <div class="call">
-                    <i class="fa-solid fa-phone"></i>1566-7727 (평일 09:00-18:00, 유료)
-                </div>
-                <div class="mail">
-                    <i class="fa-solid fa-envelope"></i>melon_info@kakaoent.com
-                </div>
-            </div>
-            <div class="infor">
-                <div class="infor_1">
-                    <p>Information</p>
-                    <a href="#">About Us</a>
-                    <a href="#">More Search</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Testimonials</a>
-                    <a href="#">Events</a>
-                </div>
-                <div class="infor_2">
-                    <p>Helpful Link</p>
-                    <a href="#">Services</a>
-                    <a href="#">Supports</a>
-                    <a href="#">Terms & Condition</a>
-                    <a href="#">Privacy Policy</a>
-                </div>
-            </div>
-            <div class="right">
-                <div class="mail">
-                    <p>Subscribe More Info</p>
-                    <form action="#" method="get">
-                        <fieldset>
-                            <legend class="skip">메일주소</legend>
-                            <i class="fa-solid fa-envelope"></i>
-                            <input type="text" placeholder="Entet your Email">
-                        </fieldset>
-                        <button type="button">Subscribe</button>
-                    </form>
-                </div>
-                <div class="sns">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include('./footer.php') ?>
     <script src="./script/common.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>

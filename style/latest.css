@@ -1,0 +1,119 @@
+main {
+    padding-top: 110px;
+    background-color: #000;
+}
+main .latest_top {}
+main .latest_top h2 {
+    font-family: '티머니';
+    text-align: center;
+    font-size: 1.8125rem;
+    margin-top: 100px;
+    color: #00D344;
+}
+main .latest_top #latest_swiper {
+    width: 1200px;
+    margin: 50px auto;
+}
+main .latest_top #latest_swiper .swiper-wrapper {}
+main .latest_top #latest_swiper .swiper-wrapper .swiper-slide {
+    width: 700px; height: 400px;
+    position: relative;
+
+}
+.blur {-webkit-filter: blur(4px);filter: blur(4px);}
+/* 블러 */
+main .latest_top #latest_swiper .swiper-wrapper .slide1 .bg {
+    width: 700px; height: 400px;
+    background: url(../images/newalbum/latest01_2.jpg);
+}
+main .latest_top #latest_swiper .swiper-wrapper .slide2 .bg {
+    width: 700px; height: 400px;
+    background: url(../images/newalbum/latest02_2.jpg);
+}
+main .latest_top #latest_swiper .swiper-wrapper .slide3 .bg {
+    width: 700px; height: 400px;
+    background: url(../images/newalbum/latest04_2.jpg);
+}
+main .latest_top #latest_swiper .swiper-wrapper .slide4 .bg {
+    width: 700px; height: 400px;
+    background: url(../images/newalbum/latest05_2.jpg);
+}
+main .latest_top #latest_swiper .swiper-wrapper .slide5 .bg {
+    width: 700px; height: 400px;
+    background: url(../images/newalbum/latest03_2.jpg);
+}
+/*  */
+main .latest_top #latest_swiper .swiper-wrapper .slide1 {
+    background: url(../images/newalbum/latest01.jpg);
+}
+main .latest_top #latest_swiper .swiper-wrapper .slide2 {
+    background: url(../images/newalbum/latest02.jpg);
+}
+main .latest_top #latest_swiper .swiper-wrapper .slide3 {
+    background: url(../images/newalbum/latest04.jpg);
+}
+main .latest_top #latest_swiper .swiper-wrapper .slide4 {
+    background: url(../images/newalbum/latest05.jpg);
+}
+main .latest_top #latest_swiper .swiper-wrapper .slide5 {
+    background: url(../images/newalbum/latest03.jpg);
+}
+main .latest_top #latest_swiper .swiper-wrapper .swiper-slide .bg {
+}
+main .latest_top #latest_swiper .swiper-wrapper .swiper-slide .txt {
+    padding: 20px;
+    display: inline-block;
+    background-color: rgba(0,0,0,0.6);
+    position: absolute; bottom: 20px; right: 30px;
+}
+main .latest_top #latest_swiper .swiper-wrapper .swiper-slide .txt h3 {
+    font-family: '티머니';
+    font-size: 1.5625rem;
+    line-height: 35px;
+    color:#fff;
+    margin-bottom: 20px;
+}
+main .latest_top #latest_swiper .swiper-wrapper .swiper-slide .txt p {
+    width: 300px;
+    font-size: 0.75rem;
+    line-height: 17px;
+    color: #fff;
+}
+main .latest_btm {}
+main .latest_btm h2 {
+    font-family: '티머니';
+    text-align: center;
+    font-size: 1.8125rem;
+    margin-top: 100px;
+    color: #00D344;
+}
+main .latest_btm .list {
+    display: flex; justify-content: space-between;
+    width: 1200px;
+    padding: 100px 0;
+    margin: 0 auto;
+}
+main .latest_btm .left {}
+main .latest_btm .right {}
+main .latest_btm ul {}
+main .latest_btm ul li {display: flex; align-items: center; margin-bottom: 50px;}
+main .latest_btm ul li:hover {background-color: #2b2b2b;}
+main .latest_btm ul li .img {width: 120px; height: 120px; margin-right: 50px;}
+main .latest_btm ul li .img img {width: 100%;}
+main .latest_btm ul li .txt {margin-right: 70px;}
+main .latest_btm ul li .txt h3 {
+    font-size: 1.5625rem;
+    color:#fff;
+    margin-bottom: 20px;
+}
+main .latest_btm ul li .txt p {
+    font-size: 1.25rem;
+    color:#aaa;
+    width: 250px;
+}
+main .latest_btm ul li a {
+    display: inline-block;
+    width: 50px; height: 50px;
+    position: relative; right: 20px;
+}
+main .latest_btm ul li a img {width: 100%;}
