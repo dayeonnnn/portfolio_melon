@@ -300,7 +300,7 @@ main #dj {
 
 main #dj .dj_btm {
     width: 1060px; margin: 0 auto; 
-    position: absolute; left:50%; bottom: 350px; transform: translateX(-50%);
+    position: absolute; left:50%; bottom: 300px; transform: translateX(-50%);
 }
 main #dj .title {
     display: flex; align-items: center; justify-content: space-between;
