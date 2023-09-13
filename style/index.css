@@ -295,7 +295,7 @@ main #ups .ups .price a {
 main #ups .ups .price a:hover {background: #00D344; color:#000; font-weight: 700;}
 main #dj {
     /* background-color: #f2f2f2; */
-    position: relative; background-color: #000;
+    position: relative;
 }
 
 main #dj .dj_btm {
